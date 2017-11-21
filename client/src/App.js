@@ -10,7 +10,7 @@ import {
 
 import HomePage from './home/components/HomePage';
 import PopularMoviesPage from './movies/components/PopularMoviesPage';
-import ShowPage from './shows/components/ShowPage';
+import ShowLandingPage from './shows/components/ShowLandingPage';
 
 class App extends Component {
     render() {
@@ -21,7 +21,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={HomePage} />
                     <Route path="/movies" component={PopularMoviesPage} />
-                    <Route path="/shows" component={ShowPage} />
+                    <Route path="/shows" component={ShowLandingPage} />
                     {/*<Route component={NotFoundPage} /> */}
                 </Switch>
             </div>
