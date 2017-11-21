@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/popular', function(req, res, next) {
-    const { baseUrl, apiKey, tvPopular } = config.tmdb;
+    const { baseUrl, apiKey, tvPopular, posterUrl, imageSizes } = config.tmdb;
     request(baseUrl + tvPopular, {
             method: "GET",
             qs: {
@@ -28,10 +28,14 @@ router.get('/popular', function(req, res, next) {
         },
         function(error, response, body) {
             if (!error && response.statusCode === 200) {
-              console.log(body);
-              res.send(body);
+                let ret = JSON.parse(body);
+                console.log(ret.results);
+                ret.results.map(result => {
+                    result.poster_path = `${posterUrl}${imageSizes.extraSmall}${result.poster_path}`;
+                });
+                res.send(ret.results);
             } else {
-              res.json(error);
+                res.json(error);
             }
         }
     );
