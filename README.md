@@ -25,3 +25,5 @@ $ cd show-brainer/client
 $ npm install -d
 $ npm start
 ```
+
+A bug makes you have to run `npm install` in both the project root directory and inside the client directory. This will be fixed.
