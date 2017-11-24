@@ -11,6 +11,7 @@ import {
 import HomePage from './home/components/HomePage';
 import PopularMoviesPage from './movies/components/PopularMoviesPage';
 import ShowLandingPage from './shows/components/ShowLandingPage';
+import ShowPage from './shows/components/ShowPage';
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route exact path="/" component={HomePage} />
                     <Route path="/movies" component={PopularMoviesPage} />
                     <Route path="/shows" component={ShowLandingPage} />
+                    <Route path="/show/:id" component={ShowPage} /> 
                     {/*<Route component={NotFoundPage} /> */}
                 </Switch>
             </div>

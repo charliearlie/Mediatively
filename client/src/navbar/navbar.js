@@ -21,8 +21,7 @@ const NavBar = () => {
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a className="navbar-brand" href="#">Album
-                    </a>
+                    <a className="navbar-brand" href="#">Show Brainer</a>
                 </div>
                 <div id="navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
