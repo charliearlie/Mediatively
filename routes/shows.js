@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/popular', function(req, res, next) {
     const { baseUrl, apiKey, tvPopular, posterUrl, imageSizes } = config.tmdb;
+    const posterSizes = imageSizes.posterSizes;
     request(baseUrl + tvPopular, {
             method: "GET",
             qs: {
@@ -31,7 +32,7 @@ router.get('/popular', function(req, res, next) {
                 let ret = JSON.parse(body);
                 console.log(ret.results);
                 ret.results.map(result => {
-                    result.poster_path = `${posterUrl}${imageSizes.extraSmall}${result.poster_path}`;
+                    result.poster_path = `${posterUrl}${posterSizes.extraSmall}${result.poster_path}`;
                 });
                 res.send(ret.results);
             } else {
