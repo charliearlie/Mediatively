@@ -20,6 +20,8 @@ class ShowLandingPage extends Component {
                         {this.state.popularShows.slice(0,4).map(show => (
                             <div className="col-lg-3 text-center">
                                 <ShowCard
+                                    key={show.id}
+                                    id={show.id}
                                     title={show.name}
                                     posterPath={show.poster_path}
                                     voteAverage={show.vote_average}
