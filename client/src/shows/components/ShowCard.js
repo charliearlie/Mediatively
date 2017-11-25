@@ -7,16 +7,17 @@ class ShowCard extends Component {
         const { title, firstAirDate, posterPath, voteAverage, id} = this.props;
 
         return(
-            <Link to={`/show/${id}`}>
-                <div className="showcard">
+
+            <div className="showcard">
+                <Link to={`/show/${id}`}>
                     <div className="showcard-img">
                         <img src={posterPath} />
                     </div>
                     <h3>{title}</h3>
                     <p>{firstAirDate.slice(0, 4)}</p>
                     <p>{voteAverage}</p>
-                </div>
-            </Link>
+                </Link>
+            </div>
         );
     }
 }

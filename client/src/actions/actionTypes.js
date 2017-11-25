@@ -1,0 +1,2 @@
+export const LOAD_SHOWS_SUCCESS = "LOAD_SHOWS_SUCCESS";
+export const ADD_SHOW = "ADD_SHOW";
