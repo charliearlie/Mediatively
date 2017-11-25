@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import ShowCard from './ShowCard';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as showActions from '../../actions/showActions';
 import '../../App.css';
 
 class ShowLandingPage extends Component {
-    state = {
-        popularShows: []
-    };
+    constructor(props) {
+        super(props);
 
-    componentDidMount() {
-        fetch('/shows/popular')
-            .then(res => res.json())
-            .then(shows => this.setState({popularShows: shows}));
+        this.actions = bindActionCreators(showActions, this.props.dispatch);
     }
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-12">
-                        {this.state.popularShows.slice(0,4).map(show => (
+                    <div className="col-lg-8">
+                        {this.state.shows.slice(0,4).map(show => (
                             <div className="col-lg-3 text-center">
                                 <ShowCard
                                     key={show.id}
@@ -36,4 +35,18 @@ class ShowLandingPage extends Component {
     }
 }
 
-export default ShowLandingPage;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        shows: state.shows
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadShows: () => {
+            this.showActions.loadShows()
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShowLandingPage);
