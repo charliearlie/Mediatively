@@ -12,11 +12,12 @@ class ShowLandingPage extends Component {
         this.actions = bindActionCreators(showActions, this.props.dispatch);
     }
     render() {
+        const { shows } = this.props;
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
-                        {this.state.shows.slice(0,4).map(show => (
+                        {shows.slice(0,4).map(show => (
                             <div className="col-lg-3 text-center">
                                 <ShowCard
                                     key={show.id}
