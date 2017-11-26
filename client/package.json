@@ -6,7 +6,8 @@
     "bootstrap": "^3.3.7",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
     "start": "PORT=3002 react-scripts start",
