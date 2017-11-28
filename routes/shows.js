@@ -55,8 +55,9 @@ router.get('/:id', function(req, res, next) {
         function(error, response, body) {
             if (!error && response.statusCode === 200) {
                 let ret = JSON.parse(body);
+                ret.poster_path = `${posterUrl}${posterSizes.large}${ret.poster_path}`
                 console.log(ret);
-                //res.send(ret.results);
+                res.send(ret);
             } else {
                 res.json(error);
             }
