@@ -38,7 +38,7 @@ class ShowLandingPage extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        shows: state.shows
+        shows: state.shows.showLandingPage
     };
 };
 
