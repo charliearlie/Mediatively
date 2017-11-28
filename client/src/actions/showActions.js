@@ -22,7 +22,7 @@ export function loadShowDetails(id) {
     return function(dispatch) {
         return fetch(`/shows/${id}`)
             .then(res => res.json())
-            .then(show => dispatch(loadShowDetailsSuccess))
+            .then(show => dispatch(loadShowDetailsSuccess(show)))
             .catch(error => {throw(error)});
     }
 }
