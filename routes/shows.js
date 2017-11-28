@@ -42,4 +42,26 @@ router.get('/popular', function(req, res, next) {
     );
 });
 
+router.get('/:id', function(req, res, next) {
+    const id = req.params.id;
+    const { baseUrl, apiKey, tvPopular, posterUrl, imageSizes } = config.tmdb;
+    const posterSizes = imageSizes.posterSizes;
+    request(`${baseUrl}tv/${id}` , {
+            method: "GET",
+            qs: {
+                api_key: apiKey
+            }
+        },
+        function(error, response, body) {
+            if (!error && response.statusCode === 200) {
+                let ret = JSON.parse(body);
+                console.log(ret);
+                //res.send(ret.results);
+            } else {
+                res.json(error);
+            }
+        }
+    );
+});
+
 module.exports = router;
