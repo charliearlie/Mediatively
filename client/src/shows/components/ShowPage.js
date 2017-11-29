@@ -1,9 +1,23 @@
 import React from 'react';
+import CoreInfo from '../../globalComponents/CoreInfo';
 
-const ShowPage = ({ match }) => {
-    return (
-        <h1>{match.params.id}</h1>
-    );
+class ShowPage extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const { showInfo } = this.props;
+        const releaseDate = showInfo.first_air_date ? showInfo.first_air_date : showInfo.release_date;
+        return (
+            <div>
+                <CoreInfo 
+                    title={showInfo.title}
+                    releaseDate={}
+                />
+            </div>
+        )
+    }
 }
 
 export default ShowPage;

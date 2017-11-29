@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import queryString from 'query-string';
 import ShowPage from '../components/ShowPage';
-import ApiHoc from '../../utilities/ApiHoc';
+import ApiHoc from '../../globalComponents/ApiHoc';
 import { loadShowDetails } from '../../actions/showActions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        showInfo: state.selectedShow
+        showInfo: state.viewedShow
     };
 };
 

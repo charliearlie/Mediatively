@@ -12,9 +12,8 @@ export function loadShows() {
     return function(dispatch) {
         return fetch('/shows/popular')
             .then(res => res.json())
-            .then(shows => {
-                dispatch(loadShowsSuccess(shows));
-            }).catch(error => {throw(error)});
+            .then(shows => dispatch(loadShowsSuccess(shows)))
+            .catch(error => {throw(error)});
     }
 }
 
