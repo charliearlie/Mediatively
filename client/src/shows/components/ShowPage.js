@@ -13,7 +13,7 @@ class ShowPage extends React.Component {
             <div>
                 <CoreInfo 
                     title={showInfo.title}
-                    releaseDate={}
+                    releaseDate={releaseDate}
                 />
             </div>
         )
