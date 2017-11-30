@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans');
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif !important;
 }
 .App {
   text-align: center;
@@ -59,4 +59,55 @@ body {
 .showcard:hover {
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.coreinfo-detail {
+  padding-top:15px;
+}
+
+span.year {
+  font-size:80%;
+  color: #757575;
+}
+
+.coreinfo-detail h2 {
+  margin-top:0;
+  margin-bottom:2px;
+}
+
+.coreinfo-image {
+  padding:15px;
+}
+
+.rating {
+  width:60px;
+  height:60px;
+  display: flex;
+  align-items: center;
+  border-radius:50%;
+  background-color:grey;
+}
+
+.rating.high {
+  background-color:#4CAF50;
+}
+
+.rating.medium {
+  background-color:#FF9800;
+}
+
+.rating.low {
+  background-color:#F44336;
+}
+
+.rating p {
+  font-size:28px;
+  margin: 0 0 0 15px;
+  font-weight:bold;
+  color:white; 
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }

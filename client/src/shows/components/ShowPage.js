@@ -10,10 +10,15 @@ class ShowPage extends React.Component {
         const { showInfo } = this.props;
         const releaseDate = showInfo.first_air_date ? showInfo.first_air_date : showInfo.release_date;
         return (
-            <div>
+            <div className="container">
                 <CoreInfo 
-                    title={showInfo.title}
+                    title={showInfo.name}
                     releaseDate={releaseDate}
+                    posterUrl={showInfo.poster_path}
+                    inProduction={showInfo.in_production}
+                    overview={showInfo.overview}
+                    voteAverage={showInfo.vote_average}
+                    genres={showInfo.genres}
                 />
             </div>
         )
