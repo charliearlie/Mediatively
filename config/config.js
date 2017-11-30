@@ -4,7 +4,7 @@ config = {};
 config.tmdb = {
     baseUrl: 'http://api.themoviedb.org/3/',
     apiKey: API_KEY,
-    homepagePopular: 'discover/movie?sort_by=popularity.desc',
+    moviesPopular: 'discover/movie?sort_by=popularity.desc',
     upcomingTitles: 'movie/upcoming',
     tvPopular: 'tv/popular',
     posterUrl: 'https://image.tmdb.org/t/p/',
