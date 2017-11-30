@@ -38,8 +38,8 @@ router.get('/upcoming', function(req, res, next) {
 });
 
 router.get('/popular', function(req, res, next) {
-    const { baseUrl, apiKey, popular } = config.tmdb;
-    request(baseUrl + popular, {
+    const { baseUrl, apiKey, moviesPopular } = config.tmdb;
+    request(baseUrl + moviesPopular, {
             method: "GET",
             qs: {
                 api_key: apiKey
@@ -51,6 +51,29 @@ router.get('/popular', function(req, res, next) {
               res.send(body);
             } else {
               res.json(error);
+            }
+        }
+    );
+});
+
+router.get('/:id', function(req, res, next) {
+    const id = req.params.id;
+    const { baseUrl, apiKey, tvPopular, posterUrl, imageSizes } = config.tmdb;
+    const posterSizes = imageSizes.posterSizes;
+    request(`${baseUrl}movie/${id}` , {
+            method: "GET",
+            qs: {
+                api_key: apiKey
+            }
+        },
+        function(error, response, body) {
+            if (!error && response.statusCode === 200) {
+                let ret = JSON.parse(body);
+                ret.poster_path = `${posterUrl}${posterSizes.large}${ret.poster_path}`
+                console.log(ret);
+                res.send(ret);
+            } else {
+                res.json(error);
             }
         }
     );
