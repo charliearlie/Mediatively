@@ -5,7 +5,7 @@ class MoviePage extends React.Component {
     
     render() {
         const { movieInfo } = this.props;
-        const releaseDate = movieInfo.first_air_date ? movieInfo.first_air_date : movieInfo.release_date;
+        const releaseDate = movieInfo.release_date;
         return (
             <div className="container">
                 <CoreInfo 

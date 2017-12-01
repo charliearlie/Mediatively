@@ -22,6 +22,7 @@ class PopularMoviesPage extends Component {
                             <MovieCard
                                 title={movie.title}
                                 releaseDate={movie.release_date}
+                                id={movie.id}
                             />
                         </div>
                     ))}
