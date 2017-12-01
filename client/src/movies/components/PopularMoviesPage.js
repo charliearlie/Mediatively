@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import MovieCard from './MovieCard';
+import { bindActionCreators } from 'redux';
+import * as movieActions from '../../actions/movieActions';
 import '../../App.css';
 
 class PopularMoviesPage extends Component {
-    state = {
-        popularMovies: []
-    };
+    constructor(props) {
+        super(props);
 
-    componentDidMount() {
-        fetch('/movies/popular')
-            .then(res => res.json())
-            .then(movies => this.setState({popularMovies: movies.results}));
+        this.actions = bindActionCreators(movieActions, this.props.dispatch);
     }
+    
     render() {
+        const { movies } = this.props;
         return (
             <div className="container">
                 <div className="row">
-                    {this.state.popularMovies.slice(0,3).map(movie => (
+                    {movies.slice(0,3).map(movie => (
                         <div className="col-lg-4">
                             <MovieCard
                                 title={movie.title}
@@ -30,4 +31,18 @@ class PopularMoviesPage extends Component {
     }
 }
 
-export default PopularMoviesPage;
+const mapStateToProps = (state, ownProps) => {
+    return {
+        movies: state.movies.popularMovies
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadMovies: () => {
+            this.movieActions.loadMovies()
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PopularMoviesPage);
