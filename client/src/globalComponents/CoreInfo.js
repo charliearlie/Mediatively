@@ -17,8 +17,8 @@ const CoreInfo = (props) => {
     return (
         <div className="row">
             <div className="col-lg-12">
-                <div className="col-sm-3 col-xs-12 text-center coreinfo-image">
-                    <img src={props.posterUrl} alt={`${props.title}_poster`} height="375px"/>
+                <div className="col-sm-3 col-xs-12 text-center coreinfo-image-container">
+                    <img src={props.posterUrl} alt={`${props.title}_poster`} className="image-responsive"/>
                 </div>
                 <div className="col-sm-6 col xs-12 coreinfo-detail">
                     <h2>{props.title} <span className="year">({releaseYear})</span></h2>

@@ -75,8 +75,14 @@ span.year {
   margin-bottom:2px;
 }
 
-.coreinfo-image {
+.coreinfo-image-container {
   padding:15px;
+}
+
+.image-responsive {
+  width:100%;
+  max-width:350px;
+  max-height:500px;
 }
 
 .rating {
