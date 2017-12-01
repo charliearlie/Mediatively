@@ -12,6 +12,7 @@ import HomePage from './home/components/HomePage';
 import PopularMoviesPage from './movies/components/PopularMoviesPage';
 import ShowLandingPage from './shows/components/ShowLandingPage';
 import ShowPageContainer from './shows/containers/ShowPageContainer';
+import MoviePageContainer from './movies/containers/MoviePageContainer';
 
 class App extends Component {
     render() {
@@ -24,6 +25,7 @@ class App extends Component {
                     <Route path="/movies" component={PopularMoviesPage} />
                     <Route path="/shows" component={ShowLandingPage} />
                     <Route path="/show/:id" component={ShowPageContainer} /> 
+                    <Route path="/movie/:id" component={MoviePageContainer} />
                     {/*<Route component={NotFoundPage} /> */}
                 </Switch>
             </div>
