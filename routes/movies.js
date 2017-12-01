@@ -38,7 +38,8 @@ router.get('/upcoming', function(req, res, next) {
 });
 
 router.get('/popular', function(req, res, next) {
-    const { baseUrl, apiKey, moviesPopular } = config.tmdb;
+    const { baseUrl, apiKey, moviesPopular, posterUrl, imageSizes } = config.tmdb;
+    const posterSizes = imageSizes.posterSizes;
     request(baseUrl + moviesPopular, {
             method: "GET",
             qs: {
@@ -47,10 +48,13 @@ router.get('/popular', function(req, res, next) {
         },
         function(error, response, body) {
             if (!error && response.statusCode === 200) {
-              console.log(body);
-              res.send(body);
+                let ret = JSON.parse(body);
+                ret.results.map(result => {
+                    result.poster_path = `${posterUrl}${posterSizes.extraSmall}${result.poster_path}`;
+                });
+                res.send(ret.results);
             } else {
-              res.json(error);
+                res.json(error);
             }
         }
     );
