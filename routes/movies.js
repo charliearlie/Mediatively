@@ -62,7 +62,7 @@ router.get('/popular', function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
     const id = req.params.id;
-    const { baseUrl, apiKey, tvPopular, posterUrl, imageSizes } = config.tmdb;
+    const { baseUrl, apiKey, posterUrl, imageSizes } = config.tmdb;
     const posterSizes = imageSizes.posterSizes;
     request(`${baseUrl}movie/${id}` , {
             method: "GET",
@@ -82,5 +82,32 @@ router.get('/:id', function(req, res, next) {
         }
     );
 });
+
+router.get('/credits/:id', function(req, res, next) {
+    const id = req.params.id;
+    const { baseUrl, apiKey } = config.tmdb;
+
+    request(`${baseUrl}movie/${id}/credits`, {
+            method: "GET",
+            qs: {
+                api_key: apiKey
+            }
+        },
+        function(error, response, body) {
+            if (!error && response.statusCode === 200) {
+                let ret = JSON.parse(body);
+                ret.cast = ret.cast.slice(0, 5);
+                ret.crew = ret.crew.slice(0, 5);
+                res.send(ret);
+            } else {
+                res.json(error);
+            }
+        }
+    )
+});
+
+function getMovieDetailsFromApi(id) {
+
+}
 
 module.exports = router;
