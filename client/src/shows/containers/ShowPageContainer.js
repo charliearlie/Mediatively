@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import queryString from 'query-string';
 import ShowPage from '../components/ShowPage';
 import ApiHoc from '../../globalComponents/ApiHoc';
 import { loadShowDetails } from '../../actions/showActions';

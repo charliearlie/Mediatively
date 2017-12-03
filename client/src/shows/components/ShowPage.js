@@ -19,6 +19,7 @@ class ShowPage extends React.Component {
                     overview={showInfo.overview}
                     voteAverage={showInfo.vote_average}
                     genres={showInfo.genres}
+                    cast={showInfo.cast}
                 />
             </div>
         )

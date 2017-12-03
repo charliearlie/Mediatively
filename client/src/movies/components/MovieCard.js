@@ -7,7 +7,7 @@ class MovieCard extends Component {
 
         return(
             <Link to={`/movie/${id}`}>
-                <div class="text-center">
+                <div className="text-center">
                     <h3>{title}</h3>
                     <p>{releaseDate}</p>
                 </div>

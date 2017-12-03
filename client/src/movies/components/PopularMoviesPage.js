@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MovieCard from './MovieCard';
 import { bindActionCreators } from 'redux';
-import * as movieActions from '../../actions/movieActions';
+import ApiHoc from '../../globalComponents/ApiHoc';
+import { loadMovies } from '../../actions/movieActions';
 import '../../App.css';
 
 class PopularMoviesPage extends Component {
     constructor(props) {
         super(props);
-
-        this.actions = bindActionCreators(movieActions, this.props.dispatch);
     }
     
     render() {
@@ -40,10 +39,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadMovies: () => {
-            this.movieActions.loadMovies()
+        onLoad: () => {
+            dispatch(loadMovies());
         }
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PopularMoviesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ApiHoc(PopularMoviesPage));
