@@ -11,7 +11,7 @@ import {Provider} from 'react-redux';
 
 const store = configureStore();
 store.dispatch(loadShows());
-store.dispatch(loadMovies());
+//store.dispatch(loadMovies());
 
 
 ReactDOM.render(
