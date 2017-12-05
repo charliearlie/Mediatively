@@ -35,12 +35,12 @@ const NavBar = () => {
                             <Link to="/shows">Shows</Link>
                         </li>
                     </ul>
-                    <div class="col-sm-3 col-md-3">
-                        <form class="navbar-form" role="search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" name="q" />
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    <div className="col-sm-3 col-md-3">
+                        <form className="navbar-form" role="search">
+                            <div className="input-group">
+                                <input type="text" className="form-control" placeholder="Search" name="q" />
+                                <div className="input-group-btn">
+                                    <button className="btn btn-default" type="submit"><i className="glyphicon glyphicon-search"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -57,6 +57,7 @@ const NavBar = () => {
                                 <span className="sr-only">(current)</span>
                             </a>
                         </li>
+                        <li><a><p style={{color: 'red'}}>DESIGN IS TEMPORARY. </p></a></li>
                     </ul>
                 </div>
             </div>

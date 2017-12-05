@@ -16,14 +16,13 @@ class PopularMoviesPage extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    {movies.slice(0,3).map(movie => (
-                        <div className="col-lg-4">
-                            <MovieCard
-                                title={movie.title}
-                                releaseDate={movie.release_date}
-                                id={movie.id}
-                            />
-                        </div>
+                    {movies.map(movie => (
+                        <MovieCard
+                            key={`${movie.id}_key`} 
+                            title={movie.title}
+                            releaseDate={movie.release_date}
+                            id={movie.id}
+                        />
                     ))}
                 </div>
             </div>
