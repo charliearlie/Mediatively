@@ -123,7 +123,7 @@ span.year {
 }
 
 .cast-member {
-  min-height: 85px;
+  min-height: 100px;
   border: 1px solid #DAD6D6;
 }
 
@@ -135,4 +135,46 @@ span.year {
 
 .cast-member-name p {
   font-size:8px;
+  padding:4px;
 }
+
+.cast-member img {
+  padding:0 15px;
+}
+
+*:before, *:after {
+  content: '';
+}
+
+hr {
+  height: 2px;
+  overflow: visible;
+  color: #999;
+  position: relative;
+  margin: 3em auto;
+  padding-bottom:10px;
+}
+hr::before {
+  content: '';
+  background: -webkit-linear-gradient(left, transparent, currentColor, transparent);
+  background: linear-gradient(to right, transparent, currentColor, transparent);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+hr[data-content] {
+  text-align: center;
+}
+hr[data-content]::after {
+  content: attr(data-content);
+  position: relative;
+  padding: 0 1.5rem;
+  top: -0.475em;
+  background-color:white;
+  font-size: 3em;
+  line-height: 1;
+  font-style: italic;
+  color: currentColor;
+}
+
