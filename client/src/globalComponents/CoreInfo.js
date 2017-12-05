@@ -25,7 +25,7 @@ const CoreInfo = (props) => {
                     <h2>{props.title} <span className="year">({releaseYear})</span></h2>
                     {props.genres &&
                     <h4>{props.genres.map((genre, i) => (
-                        <a href="#">{genre.name}{i === props.genres.length - 1 ? '' : ', '}</a>   
+                        <a key={`${genre.id}_key`} href="#">{genre.name}{i === props.genres.length - 1 ? '' : ', '}</a>   
                     ))}</h4>}
                     <p>{props.overview}</p>
                     <div className={`rating ${ratingClass}`}>
@@ -34,17 +34,17 @@ const CoreInfo = (props) => {
                     <a href="#">Rate movie</a>
                 </div>
                 <div className="col-sm-offset-1 col-sm-2 col-xs-12 coreInfo-side text-right">
-                    { props.cast && props.cast.map(castMember => (
-                        <CastMember 
-                            name={castMember.name}
-                            character={castMember.character}
-                            image={castMember.profile_path}
-                        />
-                    ))}
                 </div>
             </div>
         </div>
     );
+}
+
+CoreInfo.propTypes = {
+    title: PropTypes.string,
+    releaseYear: PropTypes.string,
+    genres: PropTypes.array,
+    voteAverage: PropTypes.number
 }
 
 export default CoreInfo;
