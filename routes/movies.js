@@ -96,7 +96,7 @@ router.get('/credits/:id', function(req, res, next) {
         function(error, response, body) {
             if (!error && response.statusCode === 200) {
                 let ret = JSON.parse(body);
-                ret.cast = ret.cast.slice(0, 5);
+                ret.cast = ret.cast;
                 ret.crew = ret.crew.slice(0, 5);
                 res.send(ret);
             } else {

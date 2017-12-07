@@ -52,11 +52,6 @@ const NavBar = () => {
                         <li>
                             <a href="../navbar-static-top/">Static top</a>
                         </li>
-                        <li className="active">
-                            <a href="./">Fixed top
-                                <span className="sr-only">(current)</span>
-                            </a>
-                        </li>
                         <li><a><p style={{color: 'red'}}>DESIGN IS TEMPORARY. </p></a></li>
                     </ul>
                 </div>
