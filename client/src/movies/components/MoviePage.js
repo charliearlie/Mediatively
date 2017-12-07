@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from 'react-modal';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import DocumentTitle from 'react-document-title';
 import CastMember from '../../globalComponents/CastMember';
@@ -11,21 +10,13 @@ class MoviePage extends React.Component {
             modalOpen: false
         }
 
-        this.openCastModal = this.openCastModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this); 
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
-    openCastModal() {
-        this.setState({modalOpen: true});
-    }
+    
 
-    afterOpenModal() {
-
-    }
-
-    closeModal() {
-        this.setState({modalOpen: false});
+    toggleModal() {
+        this.setState({modalOpen: !this.state.modalOpen});
     }
     
     render() {
@@ -64,19 +55,7 @@ class MoviePage extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-xs-12 text-center" style={{padding:'10px'}}>
-                            <button onClick={this.openCastModal}>View full cast</button>
-                            <Modal
-                                isOpen={this.state.modalOpen}
-                                onAfterOpen={this.afterOpenModal}
-                                onRequestClose={this.closeModal}
-                                contentLabel="Example Modal"
-                            >
-                            {movieInfo.cast && movieInfo.cast.map(castMember => (
-                                <p>{castMember.name}</p>
-                            ))}
-                            </Modal>
-                            
-
+                            <button onClick={this.toggleModal}>View full cast</button>
                         </div>
                     </div>
                 </div>
