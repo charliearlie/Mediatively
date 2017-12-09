@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultCastImage from '../assets/default-cast-image.png';
 
 const CastMember = (props) => {
     const baseImageUrl = "https://image.tmdb.org/t/p/w185";
+    const image = props.image ? baseImageUrl + props.image : DefaultCastImage;
     return (
         <div className="cast-member">
             <div className="row">
                 <div className="text-center">
-                    <img className="image-responsive" src={`${baseImageUrl + props.image}`} alt={props.name}/>
+                    <img className="image-responsive" src={`${image}`} alt={props.name}/>
                 </div>
             </div>
             <div className="row">
