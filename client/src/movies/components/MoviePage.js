@@ -2,6 +2,7 @@ import React from 'react';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import DocumentTitle from 'react-document-title';
 import CastMember from '../../globalComponents/CastMember';
+import CastModal from '../../people/components/CastModal';
 class MoviePage extends React.Component {
     constructor(props) {
         super(props);
@@ -58,6 +59,9 @@ class MoviePage extends React.Component {
                             <button onClick={this.toggleModal}>View full cast</button>
                         </div>
                     </div>
+                    {movieInfo.cast && 
+                    <CastModal show={this.state.modalOpen} onHide={this.toggleModal} cast={movieInfo.cast} />
+                    }
                 </div>
             </DocumentTitle>
         )
