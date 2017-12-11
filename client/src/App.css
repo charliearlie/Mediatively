@@ -32,6 +32,10 @@ body {
   to { transform: rotate(360deg); }
 }
 
+container {
+  margin-top:25px;
+}
+
 .container-fluid {
   padding-top:50px;
 }
@@ -179,10 +183,21 @@ hr[data-content]::after {
 }
 
 .person-row {
-  border-bottom:1px solid #999;
+  border-bottom:1px solid rgb(224, 224, 224);
+  margin-top:0
+}
+
+.person-row:hover {
+  background-color: rgb(235, 233, 233);
+  cursor:pointer;
 }
 
 .person-row h3 {
-  padding:0;
+  margin-bottom:0;
+}
+
+.person-row img {
+  padding-top:4px;
+  border-radius:10%;
 }
 
