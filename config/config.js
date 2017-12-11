@@ -2,7 +2,7 @@ const API_KEY = require('./apiKey');
 
 config = {};
 config.tmdb = {
-    baseUrl: 'http://api.themoviedb.org/3/',
+    baseUrl: 'https://api.themoviedb.org/3/',
     apiKey: API_KEY,
     moviesPopular: 'discover/movie?sort_by=popularity.desc',
     upcomingTitles: 'movie/upcoming',
