@@ -178,3 +178,11 @@ hr[data-content]::after {
   color: currentColor;
 }
 
+.person-row {
+  border-bottom:1px solid #999;
+}
+
+.person-row h3 {
+  padding:0;
+}
+

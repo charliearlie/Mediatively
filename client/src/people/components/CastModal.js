@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-bootstrap/lib/Modal';
+import PersonRow from './PersonRow';
 
 class CastModal extends React.Component {
     render() {
@@ -10,7 +11,11 @@ class CastModal extends React.Component {
                 </Modal.Header>
                 <Modal.Body>
                     {this.props.cast.map(castMember => (
-                        <p>{castMember.name}</p>
+                        <PersonRow
+                            name={castMember.name}
+                            character={castMember.character}
+                            image={castMember.profile_path}
+                        />
                     ))}
                 </Modal.Body>
             </Modal>
