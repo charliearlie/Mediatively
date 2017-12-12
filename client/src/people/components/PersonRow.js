@@ -6,7 +6,7 @@ const PersonRow = (props) => {
     const baseImageUrl = "https://image.tmdb.org/t/p/w45";
     const image = props.image ? baseImageUrl + props.image : DefaultCastImage;
     return (
-        <Link to={`/person/${props.id}`} >
+        <Link to={`/person/${props.id}`} className="person-anchor">
             <div className="row person-row">
                 <div className="col-xs-2">
                     <img src={image} alt={`${props.name}_image`} />

@@ -201,3 +201,8 @@ hr[data-content]::after {
   border-radius:10%;
 }
 
+a.person-anchor {
+  text-decoration: none;
+  color:#221e1e;
+}
+
