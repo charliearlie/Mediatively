@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import MovieCard from './MovieCard';
 import { bindActionCreators } from 'redux';
 import ApiHoc from '../../globalComponents/ApiHoc';
-import { loadMovies } from '../../actions/movieActions';
+import { loadPopularMovies, loadUpcomingMovies } from '../../actions/movieActions';
 import '../../App.css';
 
 class PopularMoviesPage extends Component {
@@ -39,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onLoad: () => {
-            dispatch(loadMovies());
+            dispatch(loadPopularMovies());
+            dispatch(loadUpcomingMovies());
         }
     };
 };

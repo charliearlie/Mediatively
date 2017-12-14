@@ -1,7 +1,11 @@
 import * as types from './actionTypes';
 
-export function loadMoviesSuccess(movies) {
-    return {type: types.LOAD_MOVIES_SUCCESS, movies};
+export function loadPopularMoviesSuccess(movies) {
+    return {type: types.LOAD_POPULAR_MOVIES_SUCCESS, movies};
+}
+
+export function loadUpcomingMoviesSuccess(movies) {
+    return {type: types.LOAD_UPCOMING_MOVIES_SUCCESS, movies};
 }
 
 export function loadMovieDetailsSuccess(movie) {
@@ -12,11 +16,19 @@ export function addCreditsToMovie(credits) {
     return {type: types.ADD_CREDITS_TO_MOVIE, credits};
 }
 
-export function loadMovies() {
+export function loadPopularMovies() {
     return function(dispatch) {
         fetch('/movies/popular')
             .then(res => res.json())
-            .then(movies => dispatch(loadMoviesSuccess(movies)));
+            .then(movies => dispatch(loadPopularMoviesSuccess(movies)));
+    }
+}
+
+export function loadUpcomingMovies() {
+    return function(dispatch) {
+        fetch('movies/upcoming')
+            .then(res => res.json())
+            .then(movies => dispatch(loadUpcomingMoviesSuccess(movies)));
     }
 }
 
