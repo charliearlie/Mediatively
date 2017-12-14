@@ -56,7 +56,7 @@ class MoviePage extends React.Component {
                     </div>
                     <div className="row">
                         <div className="col-xs-12 text-center" style={{padding:'10px'}}>
-                            <button onClick={this.toggleModal}>View full cast</button>
+                            <button id="cast-modal-btn" onClick={this.toggleModal}>View full cast</button>
                         </div>
                     </div>
                     {movieInfo.cast && 
