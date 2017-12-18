@@ -25,7 +25,7 @@ router.get('/upcoming', function(req, res, next) {
             qs: {
                 api_key: apiKey,
                 region: "GB", //TODO: Get user's country code
-                language="en-gb"
+                language:"en-gb"
             }
         },
         function(error, response, body) {
