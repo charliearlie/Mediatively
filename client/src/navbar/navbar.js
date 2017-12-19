@@ -29,12 +29,20 @@ const NavBar = () => {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/movies">Movies</Link>
-                        </li>
-                        <li>
-                            <Link to="/shows">Shows</Link>
-                        </li>
+                        <NavDropdown eventKey={3} title="Movies" id="basic-nav-dropdown">
+                            <MenuItem><Link to="/movies">Popular</Link></MenuItem>
+                            <MenuItem eventKey={3.2}>Upcoming</MenuItem>
+                            <MenuItem eventKey={3.3}>Top rated</MenuItem>
+                            <MenuItem divider />
+                            <MenuItem eventKey={3.3}>Top 100</MenuItem>
+                        </NavDropdown>
+                        <NavDropdown eventKey={3} title="Shows" id="basic-nav-dropdown">
+                            <MenuItem><Link to="/shows">Popular</Link></MenuItem>
+                            <MenuItem eventKey={3.2}>Upcoming</MenuItem>
+                            <MenuItem eventKey={3.3}>Top rated</MenuItem>
+                            <MenuItem divider />
+                            <MenuItem eventKey={3.3}>Recommendations</MenuItem>
+                        </NavDropdown>
                     </ul>
                     <div className="col-sm-3 col-md-3">
                         <form className="navbar-form" role="search">
@@ -47,13 +55,6 @@ const NavBar = () => {
                         </form>
                     </div>
                     <ul className="nav navbar-nav navbar-right">
-                    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                        <MenuItem eventKey={3.1}>Action</MenuItem>
-                        <MenuItem eventKey={3.2}>Another action</MenuItem>
-                        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                        <MenuItem divider />
-                        <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                    </NavDropdown>
                         <li>
                             <a href="../navbar-static-top/">Static top</a>
                         </li>

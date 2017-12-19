@@ -1,26 +1,20 @@
 import * as types from './actionTypes';
 
-export const clearResults = () => {
+const clearResults = () => {
     return {type: types.SEARCH_RESET, action};
 };
 
-export const searchActions = (propsCriteria) => {
+const performSearch = (query) => {
+    fetch(`/search/`)
+}
+
+export const searchActions = () => {
     const movePage = movement => (existingCriteria) => {
-        const { pageSize, fromElement } = existingCriteria;
-        const newFromElement = Number(fromElement) + (movement * Number(pageSize));
-        return { fromElement: newFromElement };
+        console.log(getState());
     };
 
-    const jumpTo = page => (existingCriteria) => {
-        const { pageSize } = existingCriteria;
-        const fromElement = pageSize * (page - 1);
-        return { fromElement };
-    };
-
-    const jumpTo = page => (existingCriteria) => {
-        const { pageSize } = existingCriteria;
-        const fromElement = pageSize * (page - 1);
-        return { fromElement };
+    const jumpTo = page => (dispatch, getState) => {
+        console.log(getState());
     };
 
     const updateSearch = criteriaUpdater => (dispatch, getState) => {
@@ -31,8 +25,8 @@ export const searchActions = (propsCriteria) => {
         jumpToPage: page => updateSearch(jumpTo(page)),
         nextPage: updateSearch(movePage(+1)),
         previousPage: updateSearch(movePage(-1)),
-        changeSearchType: type => updateSearch(() => ({ type })),
-        changeSearchTerm: term => updateSearch(() => ({ term, fromElement: 0 })),
-        resetSearch: dispatch(clearResults())
+        changeFilter: filter => updateSearch(() => ({ filter })),
+        resetSearch: dispatch(clearResults()),
+        performSearch: dispatch(performSearch(query))
     };
 }
