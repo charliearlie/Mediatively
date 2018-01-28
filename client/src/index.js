@@ -1,25 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store/configureStore';
 import { loadShows } from './actions/showActions';
-import { loadMovies } from './actions/movieActions';
-import {Provider} from 'react-redux';
+
+import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import NavBar from './navbar/navbar';
+import HomePage from './home/components/HomePage';
+import PopularMoviesPage from './movies/components/PopularMoviesPage';
+import ShowLandingPage from './shows/components/ShowLandingPage';
+import ShowPageContainer from './shows/containers/ShowPageContainer';
+import MoviePageContainer from './movies/containers/MoviePageContainer';
+import PersonPageContainer from './people/containers/PersonPageContainer';
 
 const store = configureStore();
 store.dispatch(loadShows());
-//store.dispatch(loadMovies());
 
 
 ReactDOM.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </Provider>,
-    document.getElementById('root'));
+	<Provider store={store}>
+		<BrowserRouter>
+			<div>
+				<NavBar />
+				<Route exact path="/" component={HomePage} />
+				<Route path="/movies" component={PopularMoviesPage} />
+				<Route path="/shows" component={ShowLandingPage} />
+				<Route path="/show/:id" component={ShowPageContainer} /> 
+				<Route path="/movie/:id" component={MoviePageContainer} />
+				<Route path="/person/:id" component={PersonPageContainer} />
+			</div>
+		</BrowserRouter>
+	</Provider>,
+	document.getElementById('root'));
 
 registerServiceWorker();
