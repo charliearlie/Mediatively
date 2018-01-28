@@ -4,23 +4,23 @@ import ApiHoc from '../../globalComponents/ApiHoc';
 import { loadMovieDetails, loadMovieCredits } from '../../actions/movieActions';
 
 /*
-    Can I share one container between the movie and show page? Probably...
+	Can I share one container between the movie and show page? Probably...
 */
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        movieInfo: state.viewedMovie
-    };
+	return {
+		movieInfo: state.viewedMovie
+	};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    const movieId = ownProps.match ? ownProps.match.params.id : undefined;
-    return {
-        onLoad: () => {
-            dispatch(loadMovieDetails(movieId));
-            dispatch(loadMovieCredits(movieId));
-        }
-    };
+	const movieId = ownProps.match ? ownProps.match.params.id : undefined;
+	return {
+		onLoad: () => {
+			dispatch(loadMovieDetails(movieId));
+			dispatch(loadMovieCredits(movieId));
+		}
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ApiHoc(MoviePage));

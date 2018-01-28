@@ -1,0 +1,15 @@
+{
+    "extends": "airbnb",
+    "rules": {
+      "comma-dangle": 1,
+      "indent": [1, "tab"],
+      "react/jsx-filename-extension": 0,
+      "no-tabs": 0,
+      "react/jsx-indent": [1, "tab"],
+      "react/jsx-indent-props": [1, "tab"]
+    },
+    "globals": {
+      "window": true,
+      "fetch": true
+    }
+  }
