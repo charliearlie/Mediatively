@@ -9,11 +9,13 @@ export function loadShowDetailsSuccess(show) {
 }
 
 export function loadShows() {
-    return function(dispatch) {
+    return (dispatch) => {
         return fetch('/shows/popular')
             .then(res => res.json())
             .then(shows => dispatch(loadShowsSuccess(shows)))
-            .catch(error => {throw(error)});
+            .catch((error) => {
+                throw (error);
+            }
     }
 }
 

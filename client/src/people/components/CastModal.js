@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/lib/Modal';
 import PersonRow from './PersonRow';
 
-const CastModal = () => {
+const CastModal = (props) => {
 	return (
 		<Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg">
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-lg">Cast</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				{this.props.cast.map(castMember => (
+				{props.cast.map(castMember => (
 					<PersonRow
 						key={castMember.id}
 						id={castMember.id}
@@ -24,3 +25,7 @@ const CastModal = () => {
 };
 
 export default CastModal;
+
+CastModal.propTypes = {
+	cast: PropTypes.arrayOf(Object).isRequired,
+};

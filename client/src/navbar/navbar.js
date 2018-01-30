@@ -8,7 +8,7 @@ const NavBar = () => {
 	return (
 		<nav className="navbar navbar-default navbar-fixed-top">
 			<div className="container">
-				
+
 				<div className="navbar-header">
 					<button
 						type="button"
@@ -16,11 +16,12 @@ const NavBar = () => {
 						data-toggle="collapse"
 						data-target="#navbar"
 						aria-expanded="false"
-						aria-controls="navbar">
+						aria-controls="navbar"
+					>
 						<span className="sr-only">Toggle navigation</span>
-						<span className="icon-bar"></span>
-						<span className="icon-bar"></span>
-						<span className="icon-bar"></span>
+						<span className="icon-bar" />
+						<span className="icon-bar" />
+						<span className="icon-bar" />
 					</button>
 					<a className="navbar-brand" href="#">Show Tracker</a>
 				</div>
@@ -66,6 +67,6 @@ const NavBar = () => {
 			</div>
 		</nav>
 	);
-}
+};
 
 export default NavBar;

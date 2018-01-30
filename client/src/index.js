@@ -27,15 +27,17 @@ ReactDOM.render(
 		<BrowserRouter>
 			<div>
 				<NavBar />
+				Wanker
 				<Route exact path="/" component={HomePage} />
 				<Route path="/movies" component={PopularMoviesPage} />
 				<Route path="/shows" component={ShowLandingPage} />
-				<Route path="/show/:id" component={ShowPageContainer} /> 
+				<Route path="/show/:id" component={ShowPageContainer} />
 				<Route path="/movie/:id" component={MoviePageContainer} />
 				<Route path="/person/:id" component={PersonPageContainer} />
 			</div>
 		</BrowserRouter>
 	</Provider>,
-	document.getElementById('root'));
+	document.getElementById('root')
+);
 
 registerServiceWorker();

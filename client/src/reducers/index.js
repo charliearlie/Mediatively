@@ -6,11 +6,11 @@ import viewedMovie from './viewedMovieReducer';
 import person from './personReducer';
 
 const rootReducer = combineReducers({
-  shows,
-  viewedShow,
-  movies,
-  viewedMovie,
-  person
+	shows,
+	viewedShow,
+	movies,
+	viewedMovie,
+	person,
 });
 
 export default rootReducer;

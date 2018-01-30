@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import DefaultCastImage from '../../assets/default-cast-image-small.png';
 
 const PersonRow = (props) => {
-	const baseImageUrl = "https://image.tmdb.org/t/p/w45";
+	const baseImageUrl = 'https://image.tmdb.org/t/p/w45';
 	const image = props.image ? baseImageUrl + props.image : DefaultCastImage;
 	return (
 		<a href={`/person/${props.id}`} className="person-anchor">
@@ -18,6 +18,17 @@ const PersonRow = (props) => {
 			</div>
 		</a>
 	);
-}
+};
+
+PersonRow.propTypes = {
+	image: PropTypes.string,
+	id: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	character: PropTypes.string.isRequired,
+};
+
+PersonRow.defaultProps = {
+	image: DefaultCastImage,
+};
 
 export default PersonRow;
