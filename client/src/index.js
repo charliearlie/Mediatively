@@ -27,13 +27,14 @@ ReactDOM.render(
 		<BrowserRouter>
 			<div>
 				<NavBar />
-				Wanker
-				<Route exact path="/" component={HomePage} />
-				<Route path="/movies" component={PopularMoviesPage} />
-				<Route path="/shows" component={ShowLandingPage} />
-				<Route path="/show/:id" component={ShowPageContainer} />
-				<Route path="/movie/:id" component={MoviePageContainer} />
-				<Route path="/person/:id" component={PersonPageContainer} />
+				<div className="root-body">
+					<Route exact path="/" component={HomePage} />
+					<Route path="/movies" component={PopularMoviesPage} />
+					<Route path="/shows" component={ShowLandingPage} />
+					<Route path="/show/:id" component={ShowPageContainer} />
+					<Route path="/movie/:id" component={MoviePageContainer} />
+					<Route path="/person/:id" component={PersonPageContainer} />
+				</div>
 			</div>
 		</BrowserRouter>
 	</Provider>,
