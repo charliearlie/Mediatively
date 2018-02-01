@@ -1,6 +1,5 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-import PropTypes from 'prop-types';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import CastSection from '../../people/components/CastSection';
 

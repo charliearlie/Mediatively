@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from 'react-bootstrap/lib/Navbar';
 import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import MenuItem from 'react-bootstrap/lib/MenuItem';
 
@@ -23,7 +22,7 @@ const NavBar = () => {
 						<span className="icon-bar" />
 						<span className="icon-bar" />
 					</button>
-					<a className="navbar-brand" href="#">Show Tracker</a>
+					<a className="navbar-brand" href="/movies">Show Tracker</a>
 				</div>
 				<div id="navbar" className="navbar-collapse collapse">
 					<ul className="nav navbar-nav">
