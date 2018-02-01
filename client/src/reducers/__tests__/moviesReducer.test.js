@@ -15,7 +15,7 @@ describe('movies reducer', () => {
 	it('should handle LOAD_POPULAR_MOVIES_SUCCESS', () => {
 		expect(reducer(undefined, {
 			type: types.LOAD_POPULAR_MOVIES_SUCCESS,
-			movies: testMovies,
+			payload: testMovies,
 		})).to.deep.equal({ popularMovies: testMovies });
 	});
 });

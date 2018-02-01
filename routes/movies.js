@@ -31,7 +31,7 @@ router.get('/upcoming', function(req, res, next) {
         function(error, response, body) {
             if (!error && response.statusCode === 200) {
               console.log(body);
-              res.send(body);
+              res.json(body);
             } else {
               res.json(error);
             }
@@ -54,7 +54,7 @@ router.get('/popular', function(req, res, next) {
                 ret.results.map(result => {
                     result.poster_path = `${posterUrl}${posterSizes.extraSmall}${result.poster_path}`;
                 });
-                res.send(ret.results);
+                res.json(ret.results);
             } else {
                 res.json(error);
             }
@@ -77,7 +77,7 @@ router.get('/:id', function(req, res, next) {
                 let ret = JSON.parse(body);
                 ret.poster_path = `${posterUrl}${posterSizes.large}${ret.poster_path}`
                 console.log(ret);
-                res.send(ret);
+                res.json(ret);
             } else {
                 res.json(error);
             }
@@ -100,7 +100,7 @@ router.get('/credits/:id', function(req, res, next) {
                 let ret = JSON.parse(body);
                 ret.cast = ret.cast;
                 ret.crew = ret.crew.slice(0, 5);
-                res.send(ret);
+                res.json(ret);
             } else {
                 res.json(error);
             }

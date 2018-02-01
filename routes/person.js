@@ -33,7 +33,7 @@ router.get('/:id', function(req, res, next) {
             if (!error && response.statusCode === 200) {
                 let ret = JSON.parse(body);
                 ret.profile_path = "https://image.tmdb.org/t/p/w185" + ret.profile_path;
-                res.send(ret);
+                res.json(ret);
             } else {
                 res.json(error);
             }

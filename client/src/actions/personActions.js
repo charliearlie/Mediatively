@@ -2,8 +2,12 @@ import axios from 'axios';
 import { LOAD_PERSON_SUCCESS } from './actionTypes';
 
 export function loadPerson(id) {
-	const request = axios.get(`/person/${id}`);
-	return { type: LOAD_PERSON_SUCCESS, payload: request };
+	return {
+		type: LOAD_PERSON_SUCCESS,
+		payload: new Promise((resolve) => {
+			axios.get(`/person/${id}`).then(response => resolve(response.data));
+		}),
+	};
 }
 
 export function emptyFunction() {

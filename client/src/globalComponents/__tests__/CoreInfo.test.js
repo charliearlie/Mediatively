@@ -5,6 +5,7 @@ import { testMovie } from '../../assets/testAssets';
 import CoreInfo from '../CoreInfo';
 
 describe('coreinfo component', () => {
+	console.log('poster', testMovie.poster_path);
 	const target = shallow(<CoreInfo
 		title={testMovie.title}
 		releaseDate={testMovie.release_date}

@@ -11,14 +11,14 @@ describe('viewed movie reducer', () => {
 	it('should handle LOAD_MOVIE_DETAILS_SUCCESS', () => {
 		expect(reducer(undefined, {
 			type: types.LOAD_MOVIE_DETAILS_SUCCESS,
-			movie: testMovie,
+			payload: testMovie,
 		})).to.deep.equal(testMovie);
 	});
 
 	it('should return the loaded movie with credits appended', () => {
 		expect(reducer(testMovie, {
 			type: types.ADD_CREDITS_TO_MOVIE,
-			credits: testMovieCredits,
-		})).to.deep.equal({ ...testMovie, ...testMovieCredits });
+			payload: testMovieCredits,
+		})).to.deep.equal({ ...testMovie, credits: testMovieCredits });
 	});
 });
