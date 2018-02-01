@@ -38,7 +38,7 @@ const NavBar = () => {
 							<MenuItem eventKey={3.3}>Top 100</MenuItem>
 						</NavDropdown>
 						<NavDropdown eventKey={3} title="Shows" id="basic-nav-dropdown">
-							<MenuItem><a href="/shows">Popular</a></MenuItem>
+							<MenuItem><Link to="/shows">Popular</Link></MenuItem>
 							<MenuItem eventKey={3.2}>Upcoming</MenuItem>
 							<MenuItem eventKey={3.3}>Top rated</MenuItem>
 							<MenuItem divider />
