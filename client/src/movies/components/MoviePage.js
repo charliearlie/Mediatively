@@ -55,6 +55,6 @@ class MoviePage extends React.Component {
 
 export default MoviePage;
 
-MoviePage.propTypes = {
-	movieInfo: PropTypes.objectOf().isRequired,
-};
+// MoviePage.propTypes = {
+// 	movieInfo: PropTypes.shape.isRequired,
+// };

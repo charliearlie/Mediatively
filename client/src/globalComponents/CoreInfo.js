@@ -20,23 +20,25 @@ const CoreInfo = (props) => {
 					<img src={props.posterUrl} alt={`${props.title}_poster`} className="image-responsive" />
 				</div>
 				<div className="col-sm-6 col xs-12 coreinfo-detail">
-					<h2>{props.title} <span className="year">({releaseYear})</span></h2>
+					<h2 className="CoreInfo__title">
+						{props.title} <span className="year">({releaseYear})</span>
+					</h2>
 					{props.genres &&
-					<h4>{props.genres.map((genre, i) => (
-						<a key={`${genre.id}_key`} href="#">{genre.name}{i === props.genres.length - 1 ? '' : ', '}</a>
+					<h4 className="CoreInfo__genreList">{props.genres.map((genre, i) => (
+						<a key={`${genre.id}_key`} href="/movies">{genre.name}{i === props.genres.length - 1 ? '' : ', '}</a>
 					))}
 					</h4>}
-					<p>{props.overview}</p>
+					<p className="CoreInfo__overview">{props.overview}</p>
 					<div className={`rating ${ratingClass}`}>
 						<p className="text-center">{props.voteAverage}</p>
 					</div>
-					<a href="#">Rate movie</a>
+					<a href="/movies">Rate movie</a>
 				</div>
 				<div className="col-sm-offset-1 col-sm-2 col-xs-12 coreInfo-side text-right" />
 			</div>
 		</div>
 	);
-}
+};
 
 CoreInfo.propTypes = {
 	title: PropTypes.string.isRequired,
@@ -44,12 +46,14 @@ CoreInfo.propTypes = {
 	genres: PropTypes.arrayOf(Object),
 	voteAverage: PropTypes.number,
 	posterUrl: PropTypes.string,
+	overview: PropTypes.string,
 };
 
 CoreInfo.defaultProps = {
 	genres: [],
 	voteAverage: 0,
 	posterUrl: '',
+	overview: '',
 };
 
 export default CoreInfo;
