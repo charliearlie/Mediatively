@@ -1,29 +1,12 @@
-import * as types from './actionTypes';
-
-export function loadShowsSuccess(shows) {
-    return {type: types.LOAD_SHOWS_SUCCESS, shows};
-}
-
-export function loadShowDetailsSuccess(show) {
-    return {type: types.LOAD_SHOW_DETAILS_SUCCESS, show};
-}
+import axios from 'axios';
+import { LOAD_SHOWS_SUCCESS, LOAD_SHOW_DETAILS_SUCCESS } from './actionTypes';
 
 export function loadShows() {
-    return (dispatch) => {
-        return fetch('/shows/popular')
-            .then(res => res.json())
-            .then(shows => dispatch(loadShowsSuccess(shows)))
-            .catch((error) => {
-                throw (error);
-            }
-    }
+	const request = axios.get('/shows/popular');
+	return { type: LOAD_SHOWS_SUCCESS, payload: request };
 }
 
 export function loadShowDetails(id) {
-    return function(dispatch) {
-        return fetch(`/shows/${id}`)
-            .then(res => res.json())
-            .then(show => dispatch(loadShowDetailsSuccess(show)))
-            .catch(error => {throw(error)});
-    }
+	const request = axios.get(`/shows/${id}`);
+	return { type: LOAD_SHOW_DETAILS_SUCCESS, payload: request };
 }
