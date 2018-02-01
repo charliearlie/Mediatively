@@ -3,6 +3,9 @@
 body {
   font-family: 'Work Sans', sans-serif !important;
 }
+.root-body {
+  padding-top:64px;
+}
 .App {
   text-align: center;
 }
