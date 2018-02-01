@@ -5,7 +5,7 @@ import PersonRow from './PersonRow';
 
 const CastModal = (props) => {
 	return (
-		<Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg">
+		<Modal {...props} bsSize="large" aria-labelledby="contained-modal-title-lg">
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-lg">Cast</Modal.Title>
 			</Modal.Header>

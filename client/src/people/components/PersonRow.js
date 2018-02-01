@@ -22,7 +22,7 @@ const PersonRow = (props) => {
 
 PersonRow.propTypes = {
 	image: PropTypes.string,
-	id: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
 	name: PropTypes.string.isRequired,
 	character: PropTypes.string.isRequired,
 };

@@ -56,7 +56,7 @@ class MoviePage extends React.Component {
 						<div className="col-md-1" />
 					</div>
 					<div className="row">
-						<div className="col-xs-12 text-center" style={{padding:'10px'}}>
+						<div className="col-xs-12 text-center" style={{ padding: '10px' }}>
 							<button id="cast-modal-btn" onClick={this.toggleModal}>View full cast</button>
 						</div>
 					</div>
@@ -71,6 +71,6 @@ class MoviePage extends React.Component {
 
 export default MoviePage;
 
-MoviePage.propTypes = {
-	movieInfo: PropTypes.objectOf().isRequired,
-};
+// MoviePage.propTypes = {
+// 	movieInfo: PropTypes.shape.isRequired,
+// };

@@ -1,7 +1,7 @@
 import * as types from '../actions/actionTypes';
 
 const initialState = {
-	person: {}
+	person: {},
 };
 
 export default function movieReducer(state = initialState, action) {

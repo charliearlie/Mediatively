@@ -1,0 +1,24 @@
+import { expect } from 'chai';
+import reducer from '../viewedMovieReducer';
+import * as types from '../../actions/actionTypes';
+import { testMovie, testMovieCredits } from '../../assets/testAssets';
+
+describe('viewed movie reducer', () => {
+	it('should return the initial state', () => {
+		expect(reducer(undefined, {})).to.deep.equal({});
+	});
+
+	it('should handle LOAD_MOVIE_DETAILS_SUCCESS', () => {
+		expect(reducer(undefined, {
+			type: types.LOAD_MOVIE_DETAILS_SUCCESS,
+			movie: testMovie,
+		})).to.deep.equal(testMovie);
+	});
+
+	it('should return the loaded movie with credits appended', () => {
+		expect(reducer(testMovie, {
+			type: types.ADD_CREDITS_TO_MOVIE,
+			credits: testMovieCredits,
+		})).to.deep.equal({ ...testMovie, ...testMovieCredits });
+	});
+});
