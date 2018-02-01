@@ -7,11 +7,12 @@ export default function ApiHoc(WrappedComponent) {
 			this.props.onLoad(this.props);
 		}
 
-		componentDidUpdate(previousProps) {
-			if (this.props.shouldRefresh(previousProps, this.props)) {
-				this.props.onLoad(this.props);
-			}
-		}
+		// Fix this function
+		// componentDidUpdate(previousProps) {
+		// 	if (this.props.shouldRefresh(previousProps, this.props)) {
+		// 		this.props.onLoad(this.props);
+		// 	}
+		// }
 
 		render() {
 			const { onLoad, shouldRefresh, ...otherProps } = this.props;
