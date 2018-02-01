@@ -9,7 +9,7 @@ const CastMember = (props) => {
 		<div className="cast-member">
 			<div className="row">
 				<div className="text-center">
-					<img className="image-responsive" src={`${image}`} alt={props.name}/>
+					<img className="image-responsive" src={`${image}`} alt={props.name} />
 				</div>
 			</div>
 			<div className="row">

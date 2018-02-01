@@ -13,7 +13,7 @@ const PopularMoviesPage = (props) => {
 			<div className="row">
 				{movies.map(movie => (
 					<MovieCard
-						key={`${movie.id}_key`} 
+						key={`${movie.id}_key`}
 						title={movie.title}
 						releaseDate={movie.release_date}
 						id={movie.id}
@@ -24,20 +24,14 @@ const PopularMoviesPage = (props) => {
 	);
 };
 
-const mapStateToProps = (state) => {
-	return {
-		movies: state.movies.popularMovies,
-	};
-};
+const mapStateToProps = state => ({ movies: state.movies.popularMovies });
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		onLoad: () => {
-			dispatch(loadPopularMovies());
-			dispatch(loadUpcomingMovies());
-		}
-	};
-};
+const mapDispatchToProps = dispatch => ({
+	onLoad: () => {
+		dispatch(loadPopularMovies());
+		dispatch(loadUpcomingMovies());
+	},
+});
 
 PopularMoviesPage.propTypes = {
 	movies: PropTypes.arrayOf().isRequired,

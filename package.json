@@ -6,6 +6,8 @@
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
     "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -31,12 +33,11 @@
     "start": "PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint \"src/**/*.js\""
   },
   "proxy": "http://localhost:3000",
   "devDependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
     "jest": "^21.2.1"
   }
 }

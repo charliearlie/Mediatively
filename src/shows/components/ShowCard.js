@@ -32,6 +32,6 @@ ShowCard.propTypes = {
 	posterPath: PropTypes.string.isRequired,
 	voteAverage: PropTypes.number.isRequired,
 	id: PropTypes.number.isRequired,
-}
+};
 
 export default ShowCard;

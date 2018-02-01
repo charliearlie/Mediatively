@@ -8,7 +8,7 @@ class MoviePage extends React.Component {
 		super(props);
 
 		this.state = {
-			modalOpen: false
+			modalOpen: false,
 		};
 
 		this.toggleModal = this.toggleModal.bind(this);
@@ -20,6 +20,7 @@ class MoviePage extends React.Component {
 	}
 
 	render() {
+		// eslint-disable-next-line react/prop-types
 		const { movieInfo } = this.props;
 		const title = movieInfo.title || 'Show Brainer';
 		const releaseDate = movieInfo.release_date;

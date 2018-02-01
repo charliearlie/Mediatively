@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 import ShowCard from './ShowCard';
 import * as showActions from '../../actions/showActions';
 import '../../App.css';
@@ -9,6 +10,7 @@ class ShowLandingPage extends Component {
 	constructor(props) {
 		super(props);
 
+		// eslint-disable-next-line react/prop-types
 		this.actions = bindActionCreators(showActions, this.props.dispatch);
 	}
 	render() {
@@ -17,7 +19,7 @@ class ShowLandingPage extends Component {
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-8">
-						{shows.slice(0,4).map(show => (
+						{shows.slice(0, 4).map(show => (
 							<div className="col-lg-3 text-center">
 								<ShowCard
 									key={show.id}
@@ -36,18 +38,20 @@ class ShowLandingPage extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		shows: state.shows.showLandingPage
-	};
-};
+const mapStateToProps = state => ({ shows: state.shows.showLandingPage });
 
 const mapDispatchToProps = (dispatch) => {
+	const temp = dispatch;
+	console.log(temp);
 	return {
 		loadShows: () => {
 			this.showActions.loadShows();
 		},
 	};
+};
+
+ShowLandingPage.propTypes = {
+	shows: PropTypes.arrayOf().isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShowLandingPage);

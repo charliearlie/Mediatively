@@ -50,11 +50,11 @@ export const testMovie = {
 	production_countries: [
 		{
 			iso_3166_1: 'DE',
-			name: 'Germany'
+			name: 'Germany',
 		},
 		{
 			iso_3166_1: 'US',
-			name: 'United States of America'
+			name: 'United States of America',
 		},
 	],
 	release_date: '1999-10-15',
@@ -64,7 +64,7 @@ export const testMovie = {
 		{
 			iso_639_1: 'en',
 			name: 'English',
-		}
+		},
 	],
 	status: 'Released',
 	tagline: 'Mischief. Mayhem. Soap.',
@@ -84,7 +84,7 @@ export const testMovieCredits = {
 			id: 819,
 			name: 'Edward Norton',
 			order: 0,
-			profile_path: '/eIkFHNlfretLS1spAcIoihKUS62.jpg'
+			profile_path: '/eIkFHNlfretLS1spAcIoihKUS62.jpg',
 		},
 		{
 			cast_id: 5,
@@ -94,7 +94,7 @@ export const testMovieCredits = {
 			id: 287,
 			name: 'Brad Pitt',
 			order: 1,
-			profile_path: '/kU3B75TyRiCgE270EyZnHjfivoq.jpg'
+			profile_path: '/kU3B75TyRiCgE270EyZnHjfivoq.jpg',
 		},
 		{
 			cast_id: 7,
@@ -104,7 +104,7 @@ export const testMovieCredits = {
 			id: 7470,
 			name: 'Meat Loaf',
 			order: 2,
-			profile_path: '/43nyfW3TxD3PxDqYB8tyqaKpDBH.jpg'
+			profile_path: '/43nyfW3TxD3PxDqYB8tyqaKpDBH.jpg',
 		},
 		{
 			cast_id: 30,
@@ -114,7 +114,7 @@ export const testMovieCredits = {
 			id: 7499,
 			name: 'Jared Leto',
 			order: 3,
-			profile_path: '/msugySeTCyCmlRWtyB6sMixTQYY.jpg'
+			profile_path: '/msugySeTCyCmlRWtyB6sMixTQYY.jpg',
 		},
 		{
 			cast_id: 6,
@@ -124,7 +124,7 @@ export const testMovieCredits = {
 			id: 1283,
 			name: 'Helena Bonham Carter',
 			order: 4,
-			profile_path: '/rHZMwkumoRvhKV5ZvwBONKENAhG.jpg'
+			profile_path: '/rHZMwkumoRvhKV5ZvwBONKENAhG.jpg',
 		},
 		{
 			cast_id: 31,
@@ -134,9 +134,9 @@ export const testMovieCredits = {
 			id: 7471,
 			name: 'Zach Grenier',
 			order: 5,
-			profile_path: '/vwYvEHYXhPBjovqbOHY011ipij9.jpg'
+			profile_path: '/vwYvEHYXhPBjovqbOHY011ipij9.jpg',
 		},
-	]
+	],
 };
 
 export const testMovieWithCredits = {
@@ -191,11 +191,11 @@ export const testMovieWithCredits = {
 	production_countries: [
 		{
 			iso_3166_1: 'DE',
-			name: 'Germany'
+			name: 'Germany',
 		},
 		{
 			iso_3166_1: 'US',
-			name: 'United States of America'
+			name: 'United States of America',
 		},
 	],
 	release_date: '1999-10-15',
@@ -204,8 +204,8 @@ export const testMovieWithCredits = {
 	spoken_languages: [
 		{
 			iso_639_1: 'en',
-			name: 'English'
-		}
+			name: 'English',
+		},
 	],
 	status: 'Released',
 	tagline: 'Mischief. Mayhem. Soap.',
@@ -222,7 +222,7 @@ export const testMovieWithCredits = {
 			id: 819,
 			name: 'Edward Norton',
 			order: 0,
-			profile_path: '/eIkFHNlfretLS1spAcIoihKUS62.jpg'
+			profile_path: '/eIkFHNlfretLS1spAcIoihKUS62.jpg',
 		},
 		{
 			cast_id: 5,
@@ -232,7 +232,7 @@ export const testMovieWithCredits = {
 			id: 287,
 			name: 'Brad Pitt',
 			order: 1,
-			profile_path: '/kU3B75TyRiCgE270EyZnHjfivoq.jpg'
+			profile_path: '/kU3B75TyRiCgE270EyZnHjfivoq.jpg',
 		},
 		{
 			cast_id: 7,
@@ -242,7 +242,7 @@ export const testMovieWithCredits = {
 			id: 7470,
 			name: 'Meat Loaf',
 			order: 2,
-			profile_path: '/43nyfW3TxD3PxDqYB8tyqaKpDBH.jpg'
+			profile_path: '/43nyfW3TxD3PxDqYB8tyqaKpDBH.jpg',
 		},
 		{
 			cast_id: 30,
@@ -252,7 +252,7 @@ export const testMovieWithCredits = {
 			id: 7499,
 			name: 'Jared Leto',
 			order: 3,
-			profile_path: '/msugySeTCyCmlRWtyB6sMixTQYY.jpg'
+			profile_path: '/msugySeTCyCmlRWtyB6sMixTQYY.jpg',
 		},
 		{
 			cast_id: 6,
@@ -262,7 +262,7 @@ export const testMovieWithCredits = {
 			id: 1283,
 			name: 'Helena Bonham Carter',
 			order: 4,
-			profile_path: '/rHZMwkumoRvhKV5ZvwBONKENAhG.jpg'
+			profile_path: '/rHZMwkumoRvhKV5ZvwBONKENAhG.jpg',
 		},
 		{
 			cast_id: 31,
@@ -272,9 +272,9 @@ export const testMovieWithCredits = {
 			id: 7471,
 			name: 'Zach Grenier',
 			order: 5,
-			profile_path: '/vwYvEHYXhPBjovqbOHY011ipij9.jpg'
+			profile_path: '/vwYvEHYXhPBjovqbOHY011ipij9.jpg',
 		},
-	]
+	],
 };
 
 export const testMovies = [

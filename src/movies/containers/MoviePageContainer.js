@@ -7,11 +7,7 @@ import { loadMovieDetails, loadMovieCredits } from '../../actions/movieActions';
 	Can I share one container between the movie and show page? Probably...
 */
 
-const mapStateToProps = (state) => {
-	return {
-		movieInfo: state.viewedMovie,
-	};
-};
+const mapStateToProps = state => ({ movieInfo: state.viewedMovie });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	const movieId = ownProps.match ? ownProps.match.params.id : undefined;

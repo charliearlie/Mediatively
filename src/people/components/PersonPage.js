@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PersonPage = (props) => {
+	// eslint-disable-next-line react/prop-types
 	const { person } = props;
 	return (
 		<div>

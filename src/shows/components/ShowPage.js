@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CoreInfo from '../../globalComponents/CoreInfo';
 
 const ShowPage = (props) => {
@@ -18,6 +19,10 @@ const ShowPage = (props) => {
 			/>
 		</div>
 	);
+};
+
+ShowPage.propTypes = {
+	showInfo: PropTypes.objectOf().isRequired,
 };
 
 export default ShowPage;
