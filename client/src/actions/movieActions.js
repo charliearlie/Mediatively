@@ -1,53 +1,26 @@
-/*
-	Actions are going to be swithced to using axios and Redux Promise
-*/
-
-import * as types from './actionTypes';
-
-export function loadPopularMoviesSuccess(movies) {
-	return { type: types.LOAD_POPULAR_MOVIES_SUCCESS, movies };
-}
-
-export function loadUpcomingMoviesSuccess(movies) {
-	return { type: types.LOAD_UPCOMING_MOVIES_SUCCESS, movies };
-}
-
-export function loadMovieDetailsSuccess(movie) {
-	return { type: types.LOAD_MOVIE_DETAILS_SUCCESS, movie };
-}
-
-export function addCreditsToMovie(credits) {
-	return { type: types.ADD_CREDITS_TO_MOVIE, credits };
-}
+import axios from 'axios';
+import { LOAD_POPULAR_MOVIES_SUCCESS,
+	LOAD_UPCOMING_MOVIES_SUCCESS,
+	LOAD_MOVIE_DETAILS_SUCCESS,
+	ADD_CREDITS_TO_MOVIE }
+	from './actionTypes';
 
 export function loadPopularMovies() {
-	return (dispatch) => {
-		fetch('/movies/popular')
-			.then(res => res.json())
-			.then(movies => dispatch(loadPopularMoviesSuccess(movies)));
-	};
+	const request = axios.get('movies/popular');
+	return { type: LOAD_POPULAR_MOVIES_SUCCESS, payload: request };
 }
 
 export function loadUpcomingMovies() {
-	return (dispatch) => {
-		fetch('movies/upcoming')
-			.then(res => res.json())
-			.then(movies => dispatch(loadUpcomingMoviesSuccess(movies)));
-	};
+	const request = axios.get('movies/upcoming');
+	return { type: LOAD_UPCOMING_MOVIES_SUCCESS, payload: request };
 }
 
 export function loadMovieDetails(id) {
-	return (dispatch) => {
-		fetch(`/movies/${id}`)
-			.then(res => res.json())
-			.then(movie => dispatch(loadMovieDetailsSuccess(movie)));
-	};
+	const request = axios.get(`/movies/${id}`);
+	return { type: LOAD_MOVIE_DETAILS_SUCCESS, payload: request };
 }
 
 export function loadMovieCredits(id) {
-	return (dispatch) => {
-		fetch(`/movies/credits/${id}`)
-			.then(res => res.json())
-			.then(credits => dispatch(addCreditsToMovie(credits)));
-	};
+	const request = axios.get(`/movies/credits/${id}`);
+	return { type: ADD_CREDITS_TO_MOVIE, payload: request };
 }

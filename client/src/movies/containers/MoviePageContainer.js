@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 		onLoad: () => {
 			dispatch(loadMovieDetails(movieId));
 			dispatch(loadMovieCredits(movieId));
-		}
+		},
 	};
 };
 

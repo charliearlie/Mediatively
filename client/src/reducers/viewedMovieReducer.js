@@ -3,9 +3,9 @@ import * as types from '../actions/actionTypes';
 export default function viewedMovieReducer(state = {}, action) {
 	switch (action.type) {
 	case types.LOAD_MOVIE_DETAILS_SUCCESS:
-		return Object.assign({}, state, action.movie);
+		return Object.assign({}, state, action.payload.data);
 	case types.ADD_CREDITS_TO_MOVIE:
-		return Object.assign({}, state, action.credits);
+		return Object.assign({}, state, { credits: action.payload.data });
 	default:
 		return state;
 	}

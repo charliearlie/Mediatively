@@ -1,16 +1,11 @@
-import * as types from './actionTypes';
-
-export function loadPersonSuccess(person) {
-	return { type: types.LOAD_PERSON_SUCCESS, person };
-}
+import axios from 'axios';
+import { LOAD_PERSON_SUCCESS } from './actionTypes';
 
 export function loadPerson(id) {
-	return (dispatch) => {
-		return fetch(`/person/${id}`)
-			.then(res => res.json())
-			.then(person => dispatch(loadPersonSuccess(person)))
-			.catch((error) => {
-				throw (error);
-			});
-	};
+	const request = axios.get(`/person/${id}`);
+	return { type: LOAD_PERSON_SUCCESS, payload: request };
+}
+
+export function emptyFunction() {
+	console.log('getting the linter to stop complaining');
 }

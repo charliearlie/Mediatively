@@ -2,8 +2,7 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import PropTypes from 'prop-types';
 import CoreInfo from '../../globalComponents/CoreInfo';
-import CastMember from '../../globalComponents/CastMember';
-import CastModal from '../../people/components/CastModal';
+import CastSection from '../../people/components/CastSection';
 
 class MoviePage extends React.Component {
 	constructor(props) {
@@ -25,6 +24,7 @@ class MoviePage extends React.Component {
 		const { movieInfo } = this.props;
 		const title = movieInfo.title || 'Show Brainer';
 		const releaseDate = movieInfo.release_date;
+
 		return (
 			<DocumentTitle title={title}>
 				<div className="container">
@@ -40,28 +40,12 @@ class MoviePage extends React.Component {
 						/>
 					</div>
 					<hr data-content="Cast" />
-					<div className="row cast-row">
-						<div className="col-md-1" />
-						{movieInfo.cast && movieInfo.cast.slice(0,5).map(castMember => (
-							<div key={`${castMember.id}_key`}>
-								<div className="col-xs-4 col-md-2">
-									<CastMember
-										name={castMember.name}
-										character={castMember.character}
-										image={castMember.profile_path}
-									/>
-								</div>
-							</div>
-						))}
-						<div className="col-md-1" />
-					</div>
-					<div className="row">
-						<div className="col-xs-12 text-center" style={{ padding: '10px' }}>
-							<button id="cast-modal-btn" onClick={this.toggleModal}>View full cast</button>
-						</div>
-					</div>
-					{movieInfo.cast &&
-					<CastModal show={this.state.modalOpen} onHide={this.toggleModal} cast={movieInfo.cast} />
+					{movieInfo.credits &&
+					<CastSection
+						modalOpen={this.state.modalOpen}
+						cast={movieInfo.credits.cast}
+						toggleModal={this.toggleModal}
+					/>
 					}
 				</div>
 			</DocumentTitle>
