@@ -9,7 +9,7 @@ import { loadMovieDetails, loadMovieCredits } from '../../actions/movieActions';
 
 const mapStateToProps = (state) => {
 	return {
-		movieInfo: state.viewedMovie
+		movieInfo: state.viewedMovie,
 	};
 };
 
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 		onLoad: () => {
 			dispatch(loadMovieDetails(movieId));
 			dispatch(loadMovieCredits(movieId));
-		}
+		},
 	};
 };
 
