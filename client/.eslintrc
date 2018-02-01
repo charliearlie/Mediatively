@@ -10,6 +10,18 @@
     },
     "globals": {
       "window": true,
-      "fetch": true
-    }
+      "fetch": true,
+      "env": true
+    },
+    "env": {
+      "browser": true
+    },
+    "overrides": [
+      {
+        "files": ["**/*.test.js"],
+        "env": {
+            "mocha": true
+        }
+      }
+    ]
   }
