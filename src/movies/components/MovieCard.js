@@ -6,12 +6,12 @@ const MovieCard = (props) => {
 	const { title, releaseDate, id } = props;
 
 	return (
-		<Link to={`/movie/${id}`}>
-			<div className="text-center">
-				<h3>{title}</h3>
-				<p>{releaseDate}</p>
-			</div>
-		</Link>
+		<div className="text-center">
+			<a href={`/movie/${id}`}>
+				<h3 className="MovieCard__title">{title}</h3>
+				<p className="MovieCard__releaseDate">{releaseDate}</p>
+			</a>
+		</div>
 	);
 };
 
@@ -20,5 +20,5 @@ export default MovieCard;
 MovieCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	releaseDate: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
 };

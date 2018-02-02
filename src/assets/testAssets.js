@@ -321,3 +321,26 @@ export const testMovies = [
 		release_date: '2017-12-08',
 	},
 ];
+
+export const testCastMember = {
+	birthday: '1971-12-26',
+	deathday: null,
+	id: 7499,
+	name: 'Jared Leto',
+	also_known_as: [
+		'Джаред Лето',
+		'จาเรด เลโท',
+		'杰瑞德·莱托',
+		'ジャレッド・レト',
+		'재러드 레토',
+		'جاريد ليتو',
+	],
+	gender: 2,
+	biography: 'Jared Joseph Leto (born December 26, 1971) is an American actor and musician. He began his career as a model before studying art, and then later, film and video. Leto gained fame during his role as Jordan Catalano in My So-Called Life. He has appeared in films such as Fight Club; Girl, Interrupted; Panic Room; American Psycho; Alexander; Requiem for a Dream; Lord of War, Prefontaine, Mr. Nobody and Suicide Squad. He is the lead vocalist, rhythm guitarist and main songwriter for the American rock band 30 Seconds to Mars and has directed music videos under the pseudonym Bartholomew Cubbins.',
+	popularity: 8.853552,
+	place_of_birth: 'Bossier City, Louisiana, USA',
+	profile_path: '/msugySeTCyCmlRWtyB6sMixTQYY.jpg',
+	adult: false,
+	imdb_id: 'nm0001467',
+	homepage: null,
+};
