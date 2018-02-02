@@ -10,13 +10,6 @@ class MoviePage extends React.Component {
 		this.state = {
 			modalOpen: false,
 		};
-
-		this.toggleModal = this.toggleModal.bind(this);
-	}
-
-
-	toggleModal() {
-		this.setState({ modalOpen: !this.state.modalOpen });
 	}
 
 	render() {
