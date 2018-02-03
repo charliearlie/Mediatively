@@ -30,7 +30,7 @@ const CoreInfo = (props) => {
 					</h4>}
 					<p className="CoreInfo__overview">{props.overview}</p>
 					<div className={`rating ${ratingClass}`}>
-						<p className="text-center">{props.voteAverage}</p>
+						<p className="text-center CoreInfo__rating">{props.voteAverage}</p>
 					</div>
 					<a href="/movies">Rate movie</a>
 				</div>

@@ -35,4 +35,9 @@ describe('coreinfo component', () => {
 		const genreList = target.find('.CoreInfo__genreList');
 		expect(genreList.text()).to.equal('Drama, Action');
 	});
+
+	test('the vote average should be displayed on the page', () => {
+		const voteAverage = target.find('.CoreInfo__rating');
+		expect(voteAverage.text()).to.equal(testMovie.vote_average.toString());
+	});
 });
