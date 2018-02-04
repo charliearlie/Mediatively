@@ -14,8 +14,8 @@ const CoreInfo = (props) => {
 	const releaseYear = props.releaseDate ? props.releaseDate.substring(0, 4) : '';
 	const ratingClass = getRatingClass(props.voteAverage);
 	return (
-		<div className="coreInfo">
-			<div className="col-lg-12">
+		<div>
+			<div className="col-xs-12 CoreInfo">
 				<div className="col-sm-3 col-xs-12 text-center coreinfo-image-container">
 					<img src={props.posterUrl} alt={`${props.title}_poster`} className="image-responsive" />
 				</div>
@@ -24,17 +24,18 @@ const CoreInfo = (props) => {
 						{props.title} <span className="year">({releaseYear})</span>
 					</h2>
 					{props.genres &&
-					<h4 className="CoreInfo__genreList">{props.genres.map((genre, i) => (
-						<a key={`${genre.id}_key`} href="/movies">{genre.name}{i === props.genres.length - 1 ? '' : ', '}</a>
+					<div className="CoreInfo__genreList">{props.genres.map(genre => (
+						<span key={`${genre.id}_key`} className="label label-default">{genre.name}</span>
 					))}
-					</h4>}
+					</div>}
+					<h3>Overview</h3>
 					<p className="CoreInfo__overview">{props.overview}</p>
 					<div className={`rating ${ratingClass}`}>
 						<p className="text-center CoreInfo__rating">{props.voteAverage}</p>
 					</div>
 					<a href="/movies">Rate movie</a>
 				</div>
-				<div className="col-sm-offset-1 col-sm-2 col-xs-12 coreInfo-side text-right" />
+				<div className="col-sm-offset-1 col-sm-2 col-xs-12 CoreInfo__side" />
 			</div>
 		</div>
 	);

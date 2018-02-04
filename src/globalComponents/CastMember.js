@@ -6,14 +6,14 @@ const CastMember = (props) => {
 	const baseImageUrl = 'https://image.tmdb.org/t/p/w185';
 	const image = props.image ? baseImageUrl + props.image : DefaultCastImage;
 	return (
-		<div className="cast-member">
+		<div className="CastMember__card">
 			<div className="row">
 				<div className="text-center">
 					<img className="image-responsive" src={`${image}`} alt={props.name} />
 				</div>
 			</div>
 			<div className="row">
-				<div className="cast-member-name text-center">
+				<div className="CastMember__name text-center">
 					<h4>{props.name}</h4>
 					<p>{props.character}</p>
 				</div>

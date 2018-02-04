@@ -33,7 +33,7 @@ describe('coreinfo component', () => {
 	test('If there are multiple genres, they should be displayed in a horizontal list', () => {
 		target.setProps({ genres: [...testMovie.genres, { id: 28, name: 'Action' }] });
 		const genreList = target.find('.CoreInfo__genreList');
-		expect(genreList.text()).to.equal('Drama, Action');
+		expect(genreList.text()).to.equal('DramaAction');
 	});
 
 	test('the vote average should be displayed on the page', () => {

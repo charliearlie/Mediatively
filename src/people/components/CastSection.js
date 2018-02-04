@@ -20,7 +20,7 @@ class CastSection extends Component {
 	render() {
 		return (
 			<div>
-				<div className="row cast-row">
+				<div className="row CastSection">
 					<div className="col-md-1" />
 					{this.props.cast.slice(0, 5).map(castMember => (
 						<div key={`${castMember.id}_key`}>
