@@ -24,22 +24,22 @@ const MovieDetails = (props) => {
 			<div className="col-xs-6 col-md-3">
 				<h3><i className="fas fa-film" /></h3>
 				<h5 className="MovieDetails__detail">Runtime</h5>
-				<p>{displayRuntime(props.runtime)}</p>
+				<p className="MovieDetails__runtime">{displayRuntime(props.runtime)}</p>
 			</div>
 			<div className="col-xs-6 col-md-3">
 				<h3><i className="fas fa-video" /></h3>
 				<h5 className="MovieDetails__detail">Director</h5>
-				<p>{props.director}</p>
+				<p className="MovieDetails__director">{props.director}</p>
 			</div>
 			<div className="col-xs-6 col-md-3">
 				<h3><i className="fas fa-dollar-sign" /></h3>
 				<h5 className="MovieDetails__detail">Budget</h5>
-				<p>{displayDollars(props.budget)}</p>
+				<p className="MovieDetails__budget">{displayDollars(props.budget)}</p>
 			</div>
 			<div className="col-xs-6 col-md-3">
 				<h3>{revenueIcon}</h3>
 				<h5 className="MovieDetails__detail">Revenue</h5>
-				<p>{displayDollars(props.revenue)}</p>
+				<p className="MovieDetails__revenue">{displayDollars(props.revenue)}</p>
 			</div>
 		</div>
 	);
