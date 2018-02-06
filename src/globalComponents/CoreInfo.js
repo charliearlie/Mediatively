@@ -15,7 +15,7 @@ const CoreInfo = (props) => {
 	const ratingClass = getRatingClass(props.voteAverage);
 	return (
 		<div>
-			<div className="col-xs-12 CoreInfo">
+			<div className="col-xs-12 CoreInfo card">
 				<div className="col-sm-3 col-xs-12 text-center coreinfo-image-container">
 					<img src={props.posterUrl} alt={`${props.title}_poster`} className="image-responsive" />
 				</div>

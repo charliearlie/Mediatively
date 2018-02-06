@@ -22,7 +22,7 @@ describe('castmember component', () => {
 	/>);
 
 	test('CastMember should display the image for cast member and an alt', () => {
-		const img = target.find('.image-responsive');
+		const img = target.find('.CastMember__image');
 		expect(img.prop('src')).to.equal(`https://image.tmdb.org/t/p/w185${testCastMember.profile_path}`);
 		expect(img.prop('alt')).to.equal(testCastMember.name);
 	});

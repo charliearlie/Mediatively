@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import MoviePage from '../components/MoviePage';
 import ApiHoc from '../../globalComponents/ApiHoc';
-import { loadMovieDetails, loadMovieCredits } from '../../actions/movieActions';
+import { loadMovieDetails, loadMovieCredits, loadYoutubeId } from '../../actions/movieActions';
 
 /*
 	Can I share one container between the movie and show page? Probably...
@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 		onLoad: () => {
 			dispatch(loadMovieDetails(movieId));
 			dispatch(loadMovieCredits(movieId));
+			dispatch(loadYoutubeId(movieId));
 		},
 	};
 };

@@ -2,7 +2,8 @@ import axios from 'axios';
 import { LOAD_POPULAR_MOVIES_SUCCESS,
 	LOAD_UPCOMING_MOVIES_SUCCESS,
 	LOAD_MOVIE_DETAILS_SUCCESS,
-	ADD_CREDITS_TO_MOVIE }
+	ADD_CREDITS_TO_MOVIE,
+	ADD_YOUTUBE_ID_TO_MOVIE }
 	from './actionTypes';
 
 export function loadPopularMovies() {
@@ -37,6 +38,15 @@ export function loadMovieCredits(id) {
 		type: ADD_CREDITS_TO_MOVIE,
 		payload: new Promise((resolve) => {
 			axios.get(`/movies/credits/${id}`).then(response => resolve(response.data));
+		}),
+	};
+}
+
+export function loadYoutubeId(id) {
+	return {
+		type: ADD_YOUTUBE_ID_TO_MOVIE,
+		payload: new Promise((resolve) => {
+			axios.get(`/movies/videos/${id}`).then(response => resolve(response.data));
 		}),
 	};
 }

@@ -20,7 +20,7 @@ const MovieDetails = (props) => {
 	const revenueIcon = props.budget > props.revenue ?
 		<i className="fas fa-minus-square" /> : <i className="fas fa-plus-square" />;
 	return (
-		<div className="col-xs-12 MediaDetails">
+		<div className="col-xs-12 MediaDetails card">
 			<div className="col-xs-6 col-md-3">
 				<h3><i className="fas fa-film" /></h3>
 				<h5 className="MovieDetails__detail">Runtime</h5>
