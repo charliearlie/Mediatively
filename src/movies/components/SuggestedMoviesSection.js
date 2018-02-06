@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SuggestedMoviesSection = (props) => {
 	const { suggestedMovies } = props;
@@ -21,6 +22,10 @@ const SuggestedMoviesSection = (props) => {
 			))}
 		</div>
 	);
+};
+
+SuggestedMoviesSection.propTypes = {
+	suggestedMovies: PropTypes.arrayOf().isRequired,
 };
 
 export default SuggestedMoviesSection;
