@@ -120,7 +120,6 @@ container {
 }
 
 .CoreInfo__related {
-  height: 718px;
   margin-bottom:8px;
 }
 
@@ -251,17 +250,7 @@ span.label.label-default:hover {
   margin: 0;
 }
 
-@media only screen and (max-width: 1200px) {
-  .CoreInfo__related {
-    height:755px;
-  }
-}
-
 @media only screen and (max-width: 992px) {
-  .CoreInfo__related {
-    height:520px;
-  }
-
   .CoreInfo__cast {
     margin-top: 8px;
   }

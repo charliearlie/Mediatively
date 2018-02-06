@@ -35,8 +35,8 @@ const MoviePage = (props) => {
 							revenue={movieInfo.revenue}
 						/>
 					</div>
-					<div className="row">
-						<div className="col col-md-9 card CoreInfo__related">
+					<div className="row card">
+						<div className="col col-md-9 CoreInfo__related">
 							<TrailerSection
 								name={movieInfo.name}
 								youtubeId={movieInfo.videoId}
