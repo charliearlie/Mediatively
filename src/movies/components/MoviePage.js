@@ -57,7 +57,3 @@ const MoviePage = (props) => {
 };
 
 export default MoviePage;
-
-// MoviePage.propTypes = {
-// 	movieInfo: PropTypes.shape.isRequired,
-// };
