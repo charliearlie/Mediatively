@@ -250,6 +250,27 @@ span.label.label-default:hover {
   margin: 0;
 }
 
+.SuggestedMoviesSection {
+  margin-top: 8px;
+}
+
+.SuggestedMovie {
+  height: 360px;
+  border-right: 1px solid #eee;
+  padding:16px;
+}
+
+.SuggestedMovie__image {
+  width:90%;
+  height: 270px;
+  margin:8px;
+}
+
+.SuggestedMovie:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
 @media only screen and (max-width: 992px) {
   .CoreInfo__cast {
     margin-top: 8px;

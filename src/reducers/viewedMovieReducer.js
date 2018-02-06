@@ -13,6 +13,8 @@ export default function viewedMovieReducer(state = {}, action) {
 		return Object.assign({}, state, { credits: action.payload });
 	case types.ADD_YOUTUBE_ID_TO_MOVIE:
 		return Object.assign({}, state, { videoId: selectFeaturedTrailer(action.payload) });
+	case types.LOAD_SUGGESTED_MOVIES:
+		return { ...state, suggestedMovies: action.payload };
 	default:
 		return state;
 	}
