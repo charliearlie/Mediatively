@@ -10,7 +10,8 @@ import { loadShows } from './actions/showActions';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import NavBar from './navbar/navbar';
+import NavBar from './navigation/navbar';
+import Footer from './navigation/footer';
 import HomePage from './home/components/HomePage';
 import PopularMoviesPage from './movies/components/PopularMoviesPage';
 import ShowLandingPage from './shows/components/ShowLandingPage';
@@ -35,6 +36,7 @@ ReactDOM.render(
 					<Route path="/movie/:id" component={MoviePageContainer} />
 					<Route path="/person/:id" component={PersonPageContainer} />
 				</div>
+				<Footer />
 			</div>
 		</BrowserRouter>
 	</Provider>,
