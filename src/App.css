@@ -87,8 +87,7 @@ container {
 }
 
 .CoreInfo {
-  padding: 32px 32px;
-  margin-top:16px;
+  display: flex;
 }
 
 .coreinfo-detail {
@@ -96,9 +95,29 @@ container {
 }
 
 .CoreInfo__title {
+  color: white;
   font-weight: bold;
   margin-top:0;
   margin-bottom:2px;
+}
+
+.CoreInfo__details {
+  padding: 32px 32px;
+  margin-top:16px;
+}
+
+.CoreInfo__layer {
+  height: 100%;
+  width: 100%;
+  background:rgba(0,0,0, 0.699);
+}
+
+.col-xs-12.CoreInfo.card {
+  padding:0;
+}
+
+.CoreInfo__overview {
+  color: white;
 }
 
 .CoreInfo__title span {
