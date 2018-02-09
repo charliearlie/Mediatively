@@ -13,6 +13,7 @@ const MoviePage = (props) => {
 	const title = movieInfo.title || 'Show Brainer';
 	const releaseDate = movieInfo.release_date;
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
+	const directorName = director ? director.name : 'Not listed';
 
 	return (
 		<DocumentTitle title={title}>
@@ -27,11 +28,12 @@ const MoviePage = (props) => {
 							overview={movieInfo.overview}
 							voteAverage={movieInfo.vote_average}
 							genres={movieInfo.genres}
+							backdropUrl={movieInfo.backdrop_path}
 						/>
 					</div>
 					<div className="row">
 						<MediaDetails
-							director={director.name}
+							director={directorName}
 							budget={movieInfo.budget}
 							runtime={movieInfo.runtime}
 							revenue={movieInfo.revenue}
