@@ -18,7 +18,7 @@ function displayRuntime(minutes) {
 
 const MovieDetails = (props) => {
 	const revenueIcon = props.budget > props.revenue ?
-		<i className="fas fa-minus-square" /> : <i className="fas fa-plus-square" />;
+		<i style={{ color: '#F44336' }} className="fas fa-minus-square" /> : <i style={{ color: '#4CAF50' }} className="fas fa-plus-square" />;
 	return (
 		<div className="col-xs-12 MediaDetails card">
 			<div className="col-xs-6 col-md-3">
