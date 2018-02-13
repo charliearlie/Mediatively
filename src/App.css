@@ -2,10 +2,11 @@
 
 body {
   font-family: 'Montserrat', sans-serif !important;
-  background-color: #fff;
 }
 .root-body {
   padding-top:64px;
+  background-color: #eee;
+  height: 100%;
 }
 
 .App {
@@ -37,8 +38,28 @@ body {
   to { transform: rotate(360deg); }
 }
 
-.MoviePage {
-  background-color: #eee;
+.HomePage__banner {
+  height: 360px;
+  display: flex;
+  background-image: url('./assets/cinema-seats2.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.HomePage__title-container {
+  height: 100px;
+  background:rgba(255, 255, 255, 0.678);
+  align-self: center;
+  margin: auto;
+  display:flex;
+  padding: 40px 20px;
+}
+
+.HomePage__title {
+  font-size: 5em;
+  font-weight: bold;
+  align-self:center;
 }
 
 container {
@@ -302,6 +323,9 @@ span.label.label-default:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  .HomePage__title {
+    font-size: 3em;
+  }
   .CoreInfo__genreList {
     font-size:16px;
   }
@@ -310,5 +334,96 @@ span.label.label-default:hover {
 @media only screen and (max-width: 400px) {
   .CoreInfo__genreList {
     font-size:12px;
+  }
+}
+
+/* Override bootstrap navbar styles */
+.navbar-default {
+  background-color: #2c363f;
+  border-color: #465775;
+}
+.navbar-default .navbar-brand {
+  color: #f2f5ea;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #d7d8d4;
+}
+.navbar-default .navbar-text {
+  color: #f2f5ea;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f2f5ea;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #d7d8d4;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #2c363f;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #f2f5ea;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #d7d8d4;
+  background-color: #465775;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #465775;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #d7d8d4;
+  background-color: #465775;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #d7d8d4;
+  background-color: #465775;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #d7d8d4;
+  background-color: #465775;
+}
+.navbar-default .navbar-toggle {
+  border-color: #465775;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #465775;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f2f5ea;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f2f5ea;
+}
+.navbar-default .navbar-link {
+  color: #f2f5ea;
+}
+.navbar-default .navbar-link:hover {
+  color: #d7d8d4;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #f2f5ea;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #d7d8d4;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #d7d8d4;
+    background-color: #465775;
   }
 }
