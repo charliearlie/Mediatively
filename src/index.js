@@ -7,8 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 import { loadShows } from './actions/showActions';
 
-import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 import NavBar from './navigation/navbar';
 import Footer from './navigation/footer';
@@ -29,12 +29,14 @@ ReactDOM.render(
 			<div>
 				<NavBar />
 				<div className="root-body">
-					<Route exact path="/" component={HomePage} />
-					<Route path="/movies" component={PopularMoviesPage} />
-					<Route path="/shows" component={ShowLandingPage} />
-					<Route path="/show/:id" component={ShowPageContainer} />
-					<Route path="/movie/:id" component={MoviePageContainer} />
-					<Route path="/person/:id" component={PersonPageContainer} />
+					<div className="container">
+						<Route exact path="/" component={HomePage} />
+						<Route path="/movies" component={PopularMoviesPage} />
+						<Route path="/shows" component={ShowLandingPage} />
+						<Route path="/show/:id" component={ShowPageContainer} />
+						<Route path="/movie/:id" component={MoviePageContainer} />
+						<Route path="/person/:id" component={PersonPageContainer} />
+					</div>
 				</div>
 				<Footer />
 			</div>

@@ -21,7 +21,7 @@ const NavBar = () => (
 					<span className="icon-bar" />
 					<span className="icon-bar" />
 				</button>
-				<a className="navbar-brand" href="/movies">Show Tracker</a>
+				<a className="navbar-brand" href="/movies">Mediatively</a>
 			</div>
 			<div id="navbar" className="navbar-collapse collapse">
 				<ul className="nav navbar-nav">
@@ -59,7 +59,7 @@ const NavBar = () => (
 					<li>
 						<a href="../navbar-static-top/">Static top</a>
 					</li>
-					<li><p style={{ color: 'red' }}>DESIGN IS TEMPORARY. </p></li>
+					<li><p style={{ color: 'red' }}>UNDER DEVELOPMENT </p></li>
 				</ul>
 			</div>
 		</div>

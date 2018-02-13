@@ -18,48 +18,46 @@ const MoviePage = (props) => {
 	return (
 		<DocumentTitle title={title}>
 			<div className="MoviePage">
-				<div className="container">
-					<div className="row">
-						<CoreInfo
-							title={movieInfo.title}
-							releaseDate={releaseDate}
-							posterUrl={movieInfo.poster_path}
-							inProduction={movieInfo.in_production}
-							overview={movieInfo.overview}
-							voteAverage={movieInfo.vote_average}
-							genres={movieInfo.genres}
-							backdropUrl={movieInfo.backdrop_path}
+				<div className="row">
+					<CoreInfo
+						title={movieInfo.title}
+						releaseDate={releaseDate}
+						posterUrl={movieInfo.poster_path}
+						inProduction={movieInfo.in_production}
+						overview={movieInfo.overview}
+						voteAverage={movieInfo.vote_average}
+						genres={movieInfo.genres}
+						backdropUrl={movieInfo.backdrop_path}
+					/>
+				</div>
+				<div className="row">
+					<MediaDetails
+						director={directorName}
+						budget={movieInfo.budget}
+						runtime={movieInfo.runtime}
+						revenue={movieInfo.revenue}
+					/>
+				</div>
+				<div className="row card">
+					<div className="col col-md-9 CoreInfo__related">
+						<TrailerSection
+							name={movieInfo.name}
+							youtubeId={movieInfo.videoId}
 						/>
 					</div>
-					<div className="row">
-						<MediaDetails
-							director={directorName}
-							budget={movieInfo.budget}
-							runtime={movieInfo.runtime}
-							revenue={movieInfo.revenue}
-						/>
+					<div className="col-md-3 CoreInfo__cast">
+						{movieInfo.credits &&
+						<PersonSection
+							cast
+							personGroup={movieInfo.credits.cast}
+						/>}
 					</div>
-					<div className="row card">
-						<div className="col col-md-9 CoreInfo__related">
-							<TrailerSection
-								name={movieInfo.name}
-								youtubeId={movieInfo.videoId}
-							/>
-						</div>
-						<div className="col-md-3 CoreInfo__cast">
-							{movieInfo.credits &&
-							<PersonSection
-								cast
-								personGroup={movieInfo.credits.cast}
-							/>}
-						</div>
-					</div>
-					<div className="row card SuggestedMoviesSection">
-						<div className="col-xs-12">
-							{suggestedMovies &&
-								<SuggestedMoviesSection suggestedMovies={suggestedMovies} />
-							}
-						</div>
+				</div>
+				<div className="row card SuggestedMoviesSection">
+					<div className="col-xs-12">
+						{suggestedMovies &&
+							<SuggestedMoviesSection suggestedMovies={suggestedMovies} />
+						}
 					</div>
 				</div>
 			</div>
