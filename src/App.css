@@ -62,6 +62,10 @@ body {
   align-self:center;
 }
 
+.HomePage__content {
+  margin-top: 8px;
+}
+
 container {
   margin-top:25px;
   background-color: #eee;
@@ -341,6 +345,7 @@ span.label.label-default:hover {
 .navbar-default {
   background-color: #2c363f;
   border-color: #465775;
+  font-weight: bold;
 }
 .navbar-default .navbar-brand {
   color: #f2f5ea;

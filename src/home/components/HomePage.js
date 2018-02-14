@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
+
 class HomePage extends Component {
 	constructor(props) {
 		super(props);
@@ -23,9 +24,13 @@ class HomePage extends Component {
 						<h1 className="HomePage__title">Mediatively</h1>
 					</div>
 				</div>
-				<div className="HomePage__content card">
-					<h1>Movies</h1>
-					{this.state.movies.map(movie => <div key={movie.id}>{movie.title}</div>)}
+				<div className="HomePage__content card" style={{ height: '200px', textAlign: 'left' }}>
+					<div className="col-md-9">
+						<h2>Upcoming movies</h2>
+						<div className="col-md-4">
+
+						</div>
+					</div>
 				</div>
 			</div>
 		);
