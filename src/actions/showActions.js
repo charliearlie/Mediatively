@@ -5,7 +5,7 @@ export function loadShows() {
 	return {
 		type: LOAD_SHOWS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get('/shows/popular').then(response => resolve(response.data));
+			axios.get('https://mediatively-api.herokuapp.com/shows/popular').then(response => resolve(response.data));
 		}),
 	};
 }
@@ -14,7 +14,7 @@ export function loadShowDetails(id) {
 	return {
 		type: LOAD_SHOW_DETAILS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get(`/shows/${id}`).then(response => resolve(response.data));
+			axios.get(`https://mediatively-api.herokuapp.com/shows/${id}`).then(response => resolve(response.data));
 		}),
 	};
 }

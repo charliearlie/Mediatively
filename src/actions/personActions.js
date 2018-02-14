@@ -5,7 +5,7 @@ export function loadPerson(id) {
 	return {
 		type: LOAD_PERSON_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get(`/person/${id}`).then(response => resolve(response.data));
+			axios.get(`https://mediatively-api.herokuapp.com/person/${id}`).then(response => resolve(response.data));
 		}),
 	};
 }

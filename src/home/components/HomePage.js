@@ -12,7 +12,7 @@ class HomePage extends Component {
 	}
 
 	componentDidMount() {
-		fetch('/movies/upcoming')
+		fetch('https://mediatively-api.herokuapp.com/movies/upcoming')
 			.then(res => res.json())
 			.then(movies => this.setState({ movies: movies.results }));
 	}
