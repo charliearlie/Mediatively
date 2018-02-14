@@ -25,17 +25,17 @@ store.dispatch(loadShows());
 
 ReactDOM.render(
 	<Provider store={store}>
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<div>
 				<NavBar />
 				<div className="root-body">
 					<div className="container">
-						<Route path={`${process.env.PUBLIC_URL}/`} component={HomePage} />
-						<Route path={`${process.env.PUBLIC_URL}/movies`} component={PopularMoviesPage} />
-						<Route path={`${process.env.PUBLIC_URL}/shows`} component={ShowLandingPage} />
-						<Route path={`${process.env.PUBLIC_URL}/show/:id`} component={ShowPageContainer} />
-						<Route path={`${process.env.PUBLIC_URL}/movie/:id`} component={MoviePageContainer} />
-						<Route path={`${process.env.PUBLIC_URL}/person/:id`} component={PersonPageContainer} />
+						<Route path="/" component={HomePage} />
+						<Route path="/movies" component={PopularMoviesPage} />
+						<Route path="/shows" component={ShowLandingPage} />
+						<Route path="/show/:id" component={ShowPageContainer} />
+						<Route path="/movie/:id" component={MoviePageContainer} />
+						<Route path="/person/:id" component={PersonPageContainer} />
 					</div>
 				</div>
 				<Footer />

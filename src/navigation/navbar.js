@@ -29,7 +29,7 @@ const NavBar = () => (
 						<a href="/">Home</a>
 					</li>
 					<NavDropdown eventKey={3} title="Movies" id="basic-nav-dropdown">
-						<MenuItem><Link to="/movies">Popular</Link></MenuItem>
+						<MenuItem><Link to={`${process.env.PUBLIC_URL}/movies`}>Popular</Link></MenuItem>
 						<MenuItem eventKey={3.2}>Upcoming</MenuItem>
 						<MenuItem eventKey={3.3}>Top rated</MenuItem>
 						<MenuItem divider />
