@@ -40,10 +40,12 @@ const MoviePage = (props) => {
 				</div>
 				<div className="row card">
 					<div className="col col-md-9 CoreInfo__related">
+						{movieInfo.name &&
 						<TrailerSection
 							name={movieInfo.name}
 							youtubeId={movieInfo.videoId}
 						/>
+						}
 					</div>
 					<div className="col-md-3 CoreInfo__cast">
 						{movieInfo.credits &&

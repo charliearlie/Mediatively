@@ -28,7 +28,7 @@ class HomePage extends Component {
 					<div className="col-md-9">
 						<h2>Upcoming movies</h2>
 						<div className="col-md-4">
-
+							{console.log(this.state.movies)}
 						</div>
 					</div>
 				</div>
