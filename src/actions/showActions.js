@@ -14,7 +14,8 @@ export function loadShowDetails(id) {
 	return {
 		type: LOAD_SHOW_DETAILS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get(`/shows/${id}`).then(response => resolve(response.data));
+			axios.get(`/shows/${id}`).then(response => resolve(response.data))
+			
 		}),
 	};
 }

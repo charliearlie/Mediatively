@@ -25,7 +25,7 @@ const CastMember = (props) => {
 CastMember.propTypes = {
 	name: PropTypes.string.isRequired,
 	character: PropTypes.string.isRequired,
-	image: PropTypes.string,
+	image: PropTypes.string
 };
 
 CastMember.defaultProps = {
