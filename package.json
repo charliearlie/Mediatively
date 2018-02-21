@@ -38,7 +38,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": ["prettier --single-quote --write", "git add"]
   },
   "proxy": "http://localhost:3000",
   "devDependencies": {
