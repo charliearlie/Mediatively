@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	const showId = ownProps.match ? ownProps.match.params.id : undefined;
 	return {
 		onLoad: () => {
-			dispatch(loadShowDetails(showId));
+			dispatch(loadShowDetails(showId))
 		},
 	};
 };

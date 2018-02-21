@@ -56,7 +56,7 @@ class PersonSection extends Component {
 
 PersonSection.propTypes = {
 	personGroup: PropTypes.arrayOf().isRequired,
-	cast: PropTypes.bool.isRequired,
+	cast: PropTypes.bool.isRequired
 };
 
 export default PersonSection;

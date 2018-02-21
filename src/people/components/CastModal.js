@@ -25,5 +25,5 @@ const CastModal = props => (
 export default CastModal;
 
 CastModal.propTypes = {
-	cast: PropTypes.arrayOf(Object).isRequired,
+	cast: PropTypes.arrayOf(Object).isRequired
 };
