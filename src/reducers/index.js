@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
 	viewedShow,
 	movies,
 	viewedMovie,
-	person,
+	person
 });
 
 export default rootReducer;
