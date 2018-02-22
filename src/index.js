@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
-import { loadShows } from './actions/showActions';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -20,7 +19,6 @@ import MoviePageContainer from './movies/containers/MoviePageContainer';
 import PersonPageContainer from './people/containers/PersonPageContainer';
 
 const store = configureStore();
-store.dispatch(loadShows());
 
 
 ReactDOM.render(
