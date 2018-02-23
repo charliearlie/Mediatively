@@ -10,9 +10,11 @@ const MoviePage = (props) => {
 	// eslint-disable-next-line react/prop-types
 	const { movieInfo } = props;
 	const { suggestedMovies } = movieInfo;
-	const title = movieInfo.title || 'Show Brainer';
+	const title = movieInfo.title || 'A website name';
 	const releaseDate = movieInfo.release_date;
-	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
+	const director = movieInfo.credits
+		? movieInfo.credits.crew.find((c) => c.job === 'Director')
+		: '';
 	const directorName = director ? director.name : 'Not listed';
 
 	return (
@@ -40,31 +42,25 @@ const MoviePage = (props) => {
 				</div>
 				<div className="row card">
 					<div className="col col-md-9 CoreInfo__related">
-						{movieInfo.name &&
-						<TrailerSection
-							name={movieInfo.name}
-							youtubeId={movieInfo.videoId}
-						/>
-						}
+						{movieInfo.name && (
+							<TrailerSection name={movieInfo.name} youtubeId={movieInfo.videoId} />
+						)}
 					</div>
 					<div className="col-md-3 CoreInfo__cast">
-						{movieInfo.credits &&
-						<PersonSection
-							cast
-							personGroup={movieInfo.credits.cast}
-						/>}
+						{movieInfo.credits && (
+							<PersonSection cast personGroup={movieInfo.credits.cast} />
+						)}
 					</div>
 				</div>
 				<div className="row card SuggestedMoviesSection">
 					<div className="col-xs-12">
-						{suggestedMovies &&
+						{suggestedMovies && (
 							<SuggestedMoviesSection suggestedMovies={suggestedMovies} />
-						}
+						)}
 					</div>
 				</div>
 			</div>
 		</DocumentTitle>
 	);
 };
-
 export default MoviePage;

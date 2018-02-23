@@ -35,14 +35,12 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint \"src/**/*.js\"",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --single-quote --write", "git add"]
+    "precommit": "pretty-quick --staged"
   },
   "proxy": "http://localhost:3000",
   "devDependencies": {
     "jest": "^21.2.1",
-    "prettier": "1.10.2"
+    "prettier": "^1.10.2",
+    "pretty-quick": "^1.4.1"
   }
 }
