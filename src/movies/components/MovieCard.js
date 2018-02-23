@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const MovieCard = (props) => {
@@ -6,10 +7,10 @@ const MovieCard = (props) => {
 
 	return (
 		<div className="text-center">
-			<a href={`/movie/${id}`}>
+			<Link to={`/movie/${id}`}>
 				<h3 className="MovieCard__title">{title}</h3>
 				<p className="MovieCard__releaseDate">{releaseDate}</p>
-			</a>
+			</Link>
 		</div>
 	);
 };

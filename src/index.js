@@ -30,7 +30,7 @@ ReactDOM.render(
 				<NavBar />
 				<div className="root-body">
 					<div className="container">
-						<Route path="/" component={HomePage} />
+						<Route exact path="/" component={HomePage} />
 						<Route path="/movies" component={PopularMoviesPage} />
 						<Route path="/shows" component={ShowLandingPage} />
 						<Route path="/show/:id" component={ShowPageContainer} />
