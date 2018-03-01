@@ -59,7 +59,6 @@ const NavBar = () => (
 					<li>
 						<a href="../navbar-static-top/">Static top</a>
 					</li>
-					<li><p style={{ color: 'red' }}>UNDER DEVELOPMENT </p></li>
 				</ul>
 			</div>
 		</div>

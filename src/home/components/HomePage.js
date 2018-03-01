@@ -13,12 +13,12 @@ const HomePage = (props) => {
 					<h1 className="HomePage__title">Mediatively</h1>
 				</div>
 			</div>
-			<div className="col-md-12 card">
-				<div className="col-md-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
+			<div className="col-xs-12 card">
+				<div className="col-xs-12 col-sm-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 					<h2>In Cinemas</h2>
 					<HomePageCollection type="movie" collection={boxOffice} />
 				</div>
-				<div className="col-md-3 HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
+				<div className="col-xs-3 hidden-xs HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 					<h2>Local</h2>
 					<ul>
 						<li>
