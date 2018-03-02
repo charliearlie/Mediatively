@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { LOAD_SHOWS_SUCCESS, LOAD_SHOW_DETAILS_SUCCESS } from './actionTypes';
+import { LOAD_POPULAR_SHOWS_SUCCESS, LOAD_SHOW_DETAILS_SUCCESS } from './actionTypes';
 
-export function loadShows() {
+export function loadPopularShows() {
 	return {
-		type: LOAD_SHOWS_SUCCESS,
+		type: LOAD_POPULAR_SHOWS_SUCCESS,
 		payload: new Promise((resolve) => {
 			axios.get('/shows/popular').then(response => resolve(response.data));
 		}),
