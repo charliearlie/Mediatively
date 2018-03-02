@@ -1,12 +1,13 @@
 import axios from 'axios';
-import { LOAD_POPULAR_MOVIES_SUCCESS,
+import { 
+	LOAD_POPULAR_MOVIES_SUCCESS,
 	LOAD_UPCOMING_MOVIES_SUCCESS,
 	LOAD_MOVIE_DETAILS_SUCCESS,
 	ADD_CREDITS_TO_MOVIE,
 	ADD_YOUTUBE_ID_TO_MOVIE,
 	LOAD_SUGGESTED_MOVIES,
-	LOAD_BOX_OFFICE_MOVIES }
-	from './actionTypes';
+	LOAD_BOX_OFFICE_MOVIES,
+} from './actionTypes';
 
 export function loadPopularMovies() {
 	return {
