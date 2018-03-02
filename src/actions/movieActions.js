@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { 
+import {
 	LOAD_POPULAR_MOVIES_SUCCESS,
 	LOAD_UPCOMING_MOVIES_SUCCESS,
 	LOAD_MOVIE_DETAILS_SUCCESS,
