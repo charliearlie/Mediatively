@@ -367,6 +367,10 @@ span.label.label-default:hover {
   background-color: #eee;
 }
 
+.navbar-form.navbar-right {
+  padding-top: 8px;
+}
+
 @media only screen and (max-width: 992px) {
   .CoreInfo__cast {
     margin-top: 8px;
@@ -502,6 +506,14 @@ span.label.label-default:hover {
 }
 .navbar-default .navbar-link:hover {
   color: #d7d8d4;
+}
+ 
+.navbar-nav {
+  margin: 0;
+}
+
+.navbar-form {
+  border: 0;
 }
 
 @media (max-width: 767px) {
