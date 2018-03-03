@@ -1,6 +1,7 @@
 # Mediatively (Built with React and Redux)
 
 [![Build Status](https://travis-ci.org/charliearlie/show-tracker-react.svg?branch=master)](https://travis-ci.org/charliearlie/show-tracker-react)
+
 I used a name generator for the name! 💩
 
 A small application dedicated to tracking your progress in a TV box set or series. The application's front end is built using React and Redux. The small backend API is built using Express and the TMDB API.
