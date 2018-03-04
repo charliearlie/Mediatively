@@ -1,7 +1,6 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://charliearlie.github.io/show-tracker-react",
   "private": true,
   "dependencies": {
     "antd": "^3.2.2",
@@ -36,9 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint \"src/**/*.js\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "./node_modules/.bin/eslint \"src/**/*.js\""
   },
   "devDependencies": {
     "gh-pages": "^1.1.0",
