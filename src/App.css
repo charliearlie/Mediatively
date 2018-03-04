@@ -59,6 +59,7 @@ body {
 
 .HomePage__title {
   font-size: 5em;
+  margin-top:16px;
   font-weight: bold;
   align-self:center;
 }
@@ -182,7 +183,19 @@ container {
   padding:0;
 }
 
-.CoreInfo__overview {
+h3 {
+  padding-top:16px;
+}
+
+h3.CoreInfo__overview {
+  padding-top: 16px;
+  margin :0;
+  color: white;
+  padding-bottom:8px;
+}
+
+p.CoreInfo__overview {
+  margin-bottom: 16px;
   color: white;
 }
 
@@ -371,6 +384,11 @@ span.label.label-default:hover {
   padding-top: 8px;
 }
 
+.ant-card-meta-title {
+  text-align: center;
+  font-size: 0.8em;
+}
+
 @media only screen and (max-width: 992px) {
   .CoreInfo__cast {
     margin-top: 8px;
@@ -402,7 +420,7 @@ span.label.label-default:hover {
 
 @media only screen and (max-width: 768px) {
   .HomePage__content {
-    height: 360px;
+    height: 460px;
   }
 }
 
@@ -414,7 +432,7 @@ span.label.label-default:hover {
     font-size:16px;
   }
   .HomePage__content {
-    height: 280px;
+    height: 380px;
   }
 
   /* .HomePage__content {
