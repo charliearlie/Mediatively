@@ -5,14 +5,13 @@ import { Provider } from 'react-redux';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
-import { loadShows } from './actions/showActions';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import NavBar from './navigation/navbar';
 import Footer from './navigation/footer';
-import HomePage from './home/components/HomePage';
+import HomePageContainer from './home/containers/HomePageContainer';
 import PopularMoviesPage from './movies/components/PopularMoviesPage';
 import ShowLandingPage from './shows/components/ShowLandingPage';
 import ShowPageContainer from './shows/containers/ShowPageContainer';
@@ -20,7 +19,6 @@ import MoviePageContainer from './movies/containers/MoviePageContainer';
 import PersonPageContainer from './people/containers/PersonPageContainer';
 
 const store = configureStore();
-store.dispatch(loadShows());
 
 
 ReactDOM.render(
@@ -30,7 +28,7 @@ ReactDOM.render(
 				<NavBar />
 				<div className="root-body">
 					<div className="container">
-						<Route exact path="/" component={HomePage} />
+						<Route exact path="/" component={HomePageContainer} />
 						<Route path="/movies" component={PopularMoviesPage} />
 						<Route path="/shows" component={ShowLandingPage} />
 						<Route path="/show/:id" component={ShowPageContainer} />

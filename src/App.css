@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body {
@@ -58,13 +59,53 @@ body {
 
 .HomePage__title {
   font-size: 5em;
+  margin-top:16px;
   font-weight: bold;
   align-self:center;
 }
 
 .HomePage__content {
   margin-top: 8px;
+  height: 100%;
+  padding-bottom: 8px;
 }
+
+.HomePage__collection {
+  cursor:pointer;
+}
+
+.HomePage__collection-image {
+  width: 100%;
+  max-height: 260px;
+}
+
+.HomePage__collection-image:hover {
+  opacity: 0.6;
+}
+
+.HomePage__collection-voteAverage {
+  text-align: center;
+}
+
+.HomePage__column {
+  border-left: 1px solid #eee;
+  margin-top:8px;
+  height: 360px;
+}
+
+.HomePage__column > ul {
+  padding:0;
+  list-style-type: none;
+}
+
+.HomePage__column > ul > li > p:nth-child(1) {
+  margin-bottom: 2px;
+}
+
+.HomePage__column > ul > li > p:nth-child(2) {
+  font-size: 0.6em;
+}
+
 
 container {
   margin-top:25px;
@@ -83,6 +124,7 @@ container {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   background-color: #fff;
+  margin-top: 8px;
 }
 
 .showcard {
@@ -141,7 +183,19 @@ container {
   padding:0;
 }
 
-.CoreInfo__overview {
+h3 {
+  padding-top:16px;
+}
+
+h3.CoreInfo__overview {
+  padding-top: 16px;
+  margin :0;
+  color: white;
+  padding-bottom:8px;
+}
+
+p.CoreInfo__overview {
+  margin-bottom: 16px;
   color: white;
 }
 
@@ -200,6 +254,14 @@ container {
   background-color:grey;
 }
 
+.collection-rating {
+  text-align: center;
+  width:24px;
+  height:24px;
+  font-size:14px;
+  margin: 8px auto;
+}
+
 .rating.high {
   background-color:#4CAF50;
 }
@@ -217,6 +279,10 @@ container {
   margin: 0 auto;
   font-weight:bold;
   color:white;
+}
+
+.collection-rating p {
+  font-size:14px;
 }
 
 .CastSection {
@@ -299,20 +365,28 @@ span.label.label-default:hover {
 }
 
 .SuggestedMovie {
-  height: 360px;
+  /* height: 360px; */
   border-right: 1px solid #eee;
   padding:16px;
 }
 
 .SuggestedMovie__image {
   width:90%;
-  height: 270px;
   margin:8px;
 }
 
 .SuggestedMovie:hover {
   cursor: pointer;
   background-color: #eee;
+}
+
+.navbar-form.navbar-right {
+  padding-top: 8px;
+}
+
+.ant-card-meta-title {
+  text-align: center;
+  font-size: 0.8em;
 }
 
 @media only screen and (max-width: 992px) {
@@ -324,6 +398,30 @@ span.label.label-default:hover {
     width: 100%;
     height: 350px;
   }
+
+  /* .HomePage__content {
+    height: 320px;
+  } */
+}
+
+@media only screen and (max-width: 650px) {
+  .HomePage__content {
+    height: 260px;
+  }
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .HomePage__content {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .HomePage__content {
+    height: 460px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -333,11 +431,22 @@ span.label.label-default:hover {
   .CoreInfo__genreList {
     font-size:16px;
   }
+  .HomePage__content {
+    height: 380px;
+  }
+
+  /* .HomePage__content {
+    height: 240px;
+  } */
 }
 
 @media only screen and (max-width: 400px) {
   .CoreInfo__genreList {
     font-size:12px;
+  }
+
+  .HomePage__content {
+    height: 180px;
   }
 }
 
@@ -415,6 +524,14 @@ span.label.label-default:hover {
 }
 .navbar-default .navbar-link:hover {
   color: #d7d8d4;
+}
+ 
+.navbar-nav {
+  margin: 0;
+}
+
+.navbar-form {
+  border: 0;
 }
 
 @media (max-width: 767px) {

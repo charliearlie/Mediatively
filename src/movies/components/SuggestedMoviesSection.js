@@ -7,7 +7,10 @@ const SuggestedMoviesSection = (props) => {
 		<div>
 			<h2>You may also like</h2>
 			{suggestedMovies.map(movie => (
-				<div className="col-xs-6 col-md-2 SuggestedMovie text-center">
+				<div
+					key={movie.title + movie.release_date}
+					className="col-xs-6 col-md-2 SuggestedMovie text-center"
+				>
 					<div className="row">
 						<img
 							className="image-responsive SuggestedMovie__image"

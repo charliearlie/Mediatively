@@ -1,14 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const getRatingClass = (rating) => {
-	if (rating < 3) {
-		return 'low';
-	} else if (rating < 7) {
-		return 'medium';
-	}
-	return 'high';
-};
+import getRatingClass from '../globalComponents/helpers/ratingsHelper';
 
 const CoreInfo = (props) => {
 	const releaseYear = props.releaseDate ? props.releaseDate.substring(0, 4) : '';

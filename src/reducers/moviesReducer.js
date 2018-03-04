@@ -10,6 +10,8 @@ export default function movieReducer(state = initialState, action) {
 		return Object.assign({}, state, { popularMovies: action.payload });
 	case types.LOAD_UPCOMING_MOVIES_SUCCESS:
 		return Object.assign({}, state, { upcomingMovies: action.payload });
+	case types.LOAD_BOX_OFFICE_MOVIES:
+		return Object.assign({}, state, { boxOfficeMovies: action.payload });
 	default:
 		return state;
 	}

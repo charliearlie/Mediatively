@@ -13,6 +13,11 @@ class ShowLandingPage extends Component {
 		// eslint-disable-next-line react/prop-types
 		this.actions = bindActionCreators(showActions, this.props.dispatch);
 	}
+
+	componentWillMount() {
+		// eslint-disable-next-line react/prop-types
+		this.props.loadShows();
+	}
 	render() {
 		const { shows } = this.props;
 		return (

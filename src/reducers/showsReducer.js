@@ -6,8 +6,8 @@ const initialState = {
 
 export default function showReducer(state = initialState, action) {
 	switch (action.type) {
-	case types.LOAD_SHOWS_SUCCESS:
-		return Object.assign({}, state, { showLandingPage: action.payload });
+	case types.LOAD_POPULAR_SHOWS_SUCCESS:
+		return Object.assign({}, state, { popular: action.payload });
 	default:
 		return state;
 	}
