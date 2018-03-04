@@ -49,7 +49,7 @@ export function loadBoxOfficeMovies() {
 	return {
 		type: LOAD_BOX_OFFICE_MOVIES,
 		payload: new Promise((resolve) => {
-			axios.get('/movies/nowplaying/GB').then(response => resolve(response.data));
+			axios.get('https://mediatively-api.herokuapp.com/movies/nowplaying/GB').then(response => resolve(response.data));
 		}),
 	};
 }
