@@ -7,10 +7,8 @@ const MovieCard = (props) => {
 
 	return (
 		<div className="text-center">
-			<Link to={`/movie/${id}`}>
-				<h3 className="MovieCard__title">{title}</h3>
-				<p className="MovieCard__releaseDate">{releaseDate}</p>
-			</Link>
+			<h3 className="MovieCard__title">{title}</h3>
+			<p className="MovieCard__releaseDate">{releaseDate}</p>
 		</div>
 	);
 };
