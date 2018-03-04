@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const MovieCard = (props) => {
-	const { title, releaseDate, id } = props;
+	const { title, releaseDate } = props;
 
 	return (
 		<div className="text-center">
@@ -18,5 +17,4 @@ export default MovieCard;
 MovieCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	releaseDate: PropTypes.string.isRequired,
-	id: PropTypes.number.isRequired,
 };
