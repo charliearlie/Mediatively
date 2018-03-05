@@ -12,7 +12,22 @@ class HomePage extends Component {
 		this.state = {
 			movieTabs: ['In Cinemas', 'Popular', 'Coming Soon'],
 			showTabs: ['On Screens', 'Popular', 'On Soon'],
+			width: 0,
 		};
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	}
+
+	componentDidMount() {
+		this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
+
+	updateWindowDimensions() {
+		this.setState({ width: window.innerWidth });
 	}
 
 	render() {
@@ -41,7 +56,7 @@ class HomePage extends Component {
 									tab={this.state.movieTabs[i]}
 									key={i} // eslint-disable-line react/no-array-index-key
 								>
-									<HomePageCollection type="movie" collection={section} />
+									<HomePageCollection type="movie" collection={section} width={this.state.width} />
 								</TabPane>
 							))}
 						</Tabs>
