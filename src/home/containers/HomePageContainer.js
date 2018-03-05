@@ -12,7 +12,7 @@ import { getMoviesHomePage } from '../../selectors/movies';
 
 const mapStateToProps = state => ({
 	boxOffice: getMoviesHomePage(state)('boxOfficeMovies'),
-	popular: state.movies.popularMovies.slice(0, 4),
+	popular: state.movies.popularMovies,
 	upcoming: state.movies.upcomingMovies,
 	popularShows: getShowsHomePage(state)('popular'),
 });
