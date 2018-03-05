@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Card } from 'antd';
@@ -42,6 +42,11 @@ const HomePageCollection = (props) => {
 HomePageCollection.propTypes = {
 	collection: PropTypes.arrayOf().isRequired,
 	type: PropTypes.string.isRequired,
+	width: PropTypes.number,
+};
+
+HomePageCollection.defaultProps = {
+	width: 1080,
 };
 
 export default HomePageCollection;
