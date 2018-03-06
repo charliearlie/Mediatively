@@ -14,7 +14,7 @@ const HomePageCollection = (props) => {
 	return (
 		<div>
 			{collection && collection.slice(0, 4).map(item => (
-				<Link to={`/${type}/${item.id}`}>
+				<Link to={`/${type}/${item.id}`} key={item.id}>
 					<div className="col-xs-6 col-sm-3 HomePage__collection">
 						<Card
 							hoverable
@@ -40,7 +40,7 @@ const HomePageCollection = (props) => {
 };
 
 HomePageCollection.propTypes = {
-	collection: PropTypes.arrayOf().isRequired,
+	collection: PropTypes.arrayOf(PropTypes.object).isRequired,
 	type: PropTypes.string.isRequired,
 	width: PropTypes.number,
 };
