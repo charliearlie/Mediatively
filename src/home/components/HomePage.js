@@ -11,7 +11,7 @@ class HomePage extends Component {
 
 		this.state = {
 			movieTabs: ['In Cinemas', 'Popular', 'Coming Soon'],
-			showTabs: ['On Screens', 'Popular', 'On Soon'],
+			showTabs: ['On Tonight (US)', 'Popular', 'On Soon'],
 			width: 0,
 		};
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -36,9 +36,10 @@ class HomePage extends Component {
 			popular,
 			upcoming,
 			popularShows,
+			todaysShows,
 		} = this.props;
 		const movieSections = [boxOffice, popular, upcoming];
-		const showSections = [popularShows];
+		const showSections = [todaysShows, popularShows];
 		const { TabPane } = Tabs;
 		return (
 			<div className="HomePage text-center">
@@ -105,6 +106,7 @@ HomePage.propTypes = {
 	popular: PropTypes.arrayOf().isRequired,
 	upcoming: PropTypes.arrayOf().isRequired,
 	popularShows: PropTypes.arrayOf().isRequired,
+	todaysShows: PropTypes.arrayOf().isRequired,
 };
 
 export default HomePage;

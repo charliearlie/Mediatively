@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import HomePage from '../components/HomePage';
 import ApiHoc from '../../globalComponents/ApiHoc';
 import { loadBoxOfficeMovies, loadPopularMovies, loadUpcomingMovies } from '../../actions/movieActions';
-import { loadPopularShows } from '../../actions/showActions';
+import { loadPopularShows, loadTodaysShows } from '../../actions/showActions';
 import { getShowsHomePage } from '../../selectors/shows';
 import { getMoviesHomePage } from '../../selectors/movies';
 
@@ -15,6 +15,7 @@ const mapStateToProps = state => ({
 	popular: state.movies.popularMovies,
 	upcoming: state.movies.upcomingMovies,
 	popularShows: getShowsHomePage(state)('popular'),
+	todaysShows: getShowsHomePage(state)('today'),
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -23,9 +24,10 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		onLoad: () => {
 			dispatch(loadBoxOfficeMovies());
-			dispatch(loadPopularShows());
 			dispatch(loadPopularMovies());
 			dispatch(loadUpcomingMovies());
+			dispatch(loadPopularShows());
+			dispatch(loadTodaysShows());
 		},
 	};
 };
