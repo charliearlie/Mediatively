@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Navbar, NavDropdown, Nav, NavItem } from 'react-bootstrap';
 import { Input } from 'antd';
 
@@ -45,6 +46,10 @@ const NavBar = (props) => {
 			</Navbar.Collapse>
 		</Navbar>
 	);
+};
+
+NavBar.propTypes = {
+	history: PropTypes.objectOf().isRequired,
 };
 
 export default NavBar;
