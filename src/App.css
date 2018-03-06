@@ -386,6 +386,38 @@ span.label.label-default:hover {
   font-size: 0.8em;
 }
 
+.footer {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #2c363f;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.footer > .container {
+  color: #fff;
+  width: 100%;
+  padding-bottom:16px;
+}
+
+.fa-twitter {
+  color: #4099FF;
+}
+
+.fa-github {
+  color: white;
+}
+
+.fa-youtube {
+  color: #e52d27;
+}
+
+.fa-linkedin {
+  color: #007bb6;
+}
+
 @media only screen and (max-width: 992px) {
   .CoreInfo__cast {
     margin-top: 8px;

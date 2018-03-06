@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Tabs } from 'antd';
 import '../../App.css';
-import HomePageCollection from './HomePageCollection';
-
+import HomePageContentSection from './HomePageContentSection';
 
 class HomePage extends Component {
 	constructor(props) {
@@ -40,7 +38,6 @@ class HomePage extends Component {
 		} = this.props;
 		const movieSections = [boxOffice, popular, upcoming];
 		const showSections = [todaysShows, popularShows];
-		const { TabPane } = Tabs;
 		return (
 			<div className="HomePage text-center">
 				<div className="col-12 card HomePage__banner">
@@ -49,19 +46,12 @@ class HomePage extends Component {
 					</div>
 				</div>
 				<div className="col-xs-12 card">
-					<div className="col-xs-12 col-sm-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
-						<h2>Movies</h2>
-						<Tabs defaultActiveKey="0" onChange={this.onTabChange}>
-							{movieSections.map((section, i) => (
-								<TabPane
-									tab={this.state.movieTabs[i]}
-									key={i} // eslint-disable-line react/no-array-index-key
-								>
-									<HomePageCollection type="movie" collection={section} width={this.state.width} />
-								</TabPane>
-							))}
-						</Tabs>
-					</div>
+					<HomePageContentSection
+						header="Movies"
+						sections={movieSections}
+						width={this.state.width}
+						tabs={this.state.movieTabs}
+					/>
 					<div className="col-xs-3 hidden-xs HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 						<h2>Local</h2>
 						<ul>
@@ -81,19 +71,12 @@ class HomePage extends Component {
 					</div>
 				</div>
 				<div className="col-xs-12 card">
-					<div className="col-xs-12 col-md-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
-						<h2>Shows</h2>
-						<Tabs defaultActiveKey="0" onChange={this.onTabChange}>
-							{showSections.map((section, i) => (
-								<TabPane
-									tab={this.state.showTabs[i]}
-									key={i} // eslint-disable-line react/no-array-index-key
-								>
-									<HomePageCollection type="shows" collection={section} />
-								</TabPane>
-							))}
-						</Tabs>
-					</div>
+					<HomePageContentSection
+						header="Shows"
+						sections={showSections}
+						width={this.state.width}
+						tabs={this.state.showTabs}
+					/>
 					<div className="col-xs-3 hidden-xs HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }} />
 				</div>
 			</div>
