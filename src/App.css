@@ -381,10 +381,6 @@ span.label.label-default:hover {
   background-color: #eee;
 }
 
-.navbar-form.navbar-right {
-  padding-top: 8px;
-}
-
 .ant-card-meta-title {
   text-align: center;
   font-size: 0.8em;
@@ -511,6 +507,7 @@ span.label.label-default:hover {
 
 .navbar-form {
   border: 0;
+  margin:0;
 }
 
 @media (max-width: 767px) {

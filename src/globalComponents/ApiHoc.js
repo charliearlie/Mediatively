@@ -15,14 +15,13 @@ export default function ApiHoc(WrappedComponent) {
 		// }
 
 		render() {
-			const { onLoad, shouldRefresh, ...otherProps } = this.props;
+			const { onLoad, ...otherProps } = this.props;
 			return (<WrappedComponent {...otherProps} />);
 		}
 	};
 
 	ApiComponent.propTypes = {
 		onLoad: PropTypes.func.isRequired,
-		shouldRefresh: PropTypes.func.isRequired,
 	};
 
 	return ApiComponent;

@@ -102,11 +102,19 @@ class HomePage extends Component {
 }
 
 HomePage.propTypes = {
-	boxOffice: PropTypes.arrayOf().isRequired,
-	popular: PropTypes.arrayOf().isRequired,
-	upcoming: PropTypes.arrayOf().isRequired,
-	popularShows: PropTypes.arrayOf().isRequired,
-	todaysShows: PropTypes.arrayOf().isRequired,
+	boxOffice: PropTypes.arrayOf(PropTypes.object),
+	popular: PropTypes.arrayOf(PropTypes.object),
+	upcoming: PropTypes.arrayOf(PropTypes.object),
+	popularShows: PropTypes.arrayOf(PropTypes.object),
+	todaysShows: PropTypes.arrayOf(PropTypes.object),
+};
+
+HomePage.defaultProps = {
+	boxOffice: [],
+	popular: [],
+	upcoming: [],
+	popularShows: [],
+	todaysShows: [],
 };
 
 export default HomePage;

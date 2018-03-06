@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, withRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -20,12 +20,13 @@ import PersonPageContainer from './people/containers/PersonPageContainer';
 
 const store = configureStore();
 
+const NavWithRouter = withRouter(NavBar);
 
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
 			<div>
-				<NavBar />
+				<NavWithRouter />
 				<div className="root-body">
 					<div className="container">
 						<Route exact path="/" component={HomePageContainer} />
