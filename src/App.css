@@ -6,6 +6,7 @@ body {
 }
 .root-body {
   padding-top:64px;
+  padding-bottom: 32px;
   background-color: #eee;
   height: 100%;
 }
