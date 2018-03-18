@@ -2,7 +2,7 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import PersonSection from '../../people/components/PersonSection';
-import MediaDetails from './MovieDetails';
+import MovieDetails from './MovieDetails';
 import TrailerSection from './TrailerSelection';
 import SuggestedMoviesSection from './SuggestedMoviesSection';
 
@@ -31,7 +31,7 @@ const MoviePage = (props) => {
 					/>
 				</div>
 				<div className="row">
-					<MediaDetails
+					<MovieDetails
 						director={directorName}
 						budget={movieInfo.budget}
 						runtime={movieInfo.runtime}
