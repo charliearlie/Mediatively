@@ -240,6 +240,7 @@ p.CoreInfo__overview {
 
 .coreinfo-image-container {
   padding:15px;
+  margin-bottom: 24px;
 }
 
 .image-responsive {

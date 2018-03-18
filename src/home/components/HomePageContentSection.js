@@ -6,6 +6,7 @@ import HomePageCollection from './HomePageCollection';
 const HomePageContentSection = (props) => {
 	const {
 		header,
+		type,
 		sections,
 		width,
 		tabs,
@@ -20,7 +21,7 @@ const HomePageContentSection = (props) => {
 						tab={tabs[i]}
 						key={i} // eslint-disable-line react/no-array-index-key
 					>
-						<HomePageCollection type="movie" collection={section} width={width} />
+						<HomePageCollection type={type} collection={section} width={width} />
 					</TabPane>
 				))}
 			</Tabs>
@@ -33,6 +34,11 @@ HomePageContentSection.propTypes = {
 	sections: PropTypes.arrayOf(PropTypes.object).isRequired,
 	width: PropTypes.number.isRequired,
 	tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+	type: PropTypes.string,
+};
+
+HomePageContentSection.defaultProps = {
+	type: 'movie',
 };
 
 export default HomePageContentSection;

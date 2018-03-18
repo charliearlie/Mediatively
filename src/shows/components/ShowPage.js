@@ -15,7 +15,7 @@ const ShowPage = (props) => {
 				overview={showInfo.overview}
 				voteAverage={showInfo.vote_average}
 				genres={showInfo.genres}
-				cast={showInfo.cast}
+				backdropUrl={showInfo.backdrop_path}
 			/>
 		</div>
 	);
