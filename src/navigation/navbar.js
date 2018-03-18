@@ -33,7 +33,7 @@ const NavBar = (props) => {
 					<FormGroup>
 						<FormControl type="text" placeholder="Search" />
 					</FormGroup>{' '}
-					<Button type="submit"><i className="fas fa-search"/></Button>
+					<Button type="submit"><i className="fas fa-search" /></Button>
 				</Navbar.Form>
 			</Navbar.Collapse>
 		</Navbar>
