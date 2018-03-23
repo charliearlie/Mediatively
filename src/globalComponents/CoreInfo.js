@@ -10,7 +10,7 @@ const CoreInfo = (props) => {
 		<div>
 			<div
 				className="col-xs-12 CoreInfo card"
-				style={{ 
+				style={{
 					backgroundImage,
 					backgroundSize: 'cover',
 					backgroundColor: 'transparent',
