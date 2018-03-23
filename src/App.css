@@ -438,6 +438,10 @@ span.label.label-default:hover {
     margin:auto;
     margin-bottom: 8px;
   }
+  .root-body {
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -542,6 +546,10 @@ span.label.label-default:hover {
 .navbar-form {
   border: 0;
   margin:0;
+}
+
+.navbar-right {
+  padding-top: 8px;
 }
 
 @media (max-width: 767px) {

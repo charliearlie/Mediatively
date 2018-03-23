@@ -8,7 +8,15 @@ const CoreInfo = (props) => {
 	const backgroundImage = `url("${props.backdropUrl}")`;
 	return (
 		<div>
-			<div className="col-xs-12 CoreInfo card" style={{ backgroundImage, backgroundSize: 'cover', backgroundColor: 'transparent' }}>
+			<div
+				className="col-xs-12 CoreInfo card"
+				style={{ 
+					backgroundImage,
+					backgroundSize: 'cover',
+					backgroundColor: 'transparent',
+					backgroundPosition: 'center',
+				}}
+			>
 				<div className="CoreInfo__layer">
 					<div className="CoreInfo__details">
 						<div className="col-sm-3 col-xs-12 text-center coreinfo-image-container">
