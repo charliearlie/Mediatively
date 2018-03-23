@@ -48,6 +48,7 @@ class HomePage extends Component {
 				<div className="col-xs-12 card">
 					<HomePageContentSection
 						header="Movies"
+						type="movie"
 						sections={movieSections}
 						width={this.state.width}
 						tabs={this.state.movieTabs}
@@ -73,6 +74,7 @@ class HomePage extends Component {
 				<div className="col-xs-12 card">
 					<HomePageContentSection
 						header="Shows"
+						type="show"
 						sections={showSections}
 						width={this.state.width}
 						tabs={this.state.showTabs}
