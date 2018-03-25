@@ -69,7 +69,7 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path
-        .relative(paths.appSrc, info.absoluteResourcePath)
+        .relative(paths.appMain, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
   },
   resolve: {
@@ -146,7 +146,7 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            include: [paths.appSrc, paths.appNodeModules],
+            include: [paths.appMain, paths.appNodeModules],
             use: [
               {
                 loader: require.resolve('style-loader'),

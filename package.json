@@ -63,7 +63,7 @@
   },
   "scripts": {
     "start": "PORT=3002 node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js CI=false",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint \"src/**/*.js\""
   },
@@ -81,7 +81,7 @@
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/js/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
