@@ -1,1 +1,13 @@
-src/registerServiceWorker.js
+src/js/registerServiceWorker.js
+config/webpack.config.dev.js
+config/webpack.config.prod.js
+config/webpackDevServer.config.js
+config/polyfills.js
+config/paths.js
+config/env.js
+config/jest/cssTransform.js
+config/jest/fileTransform.js
+scripts/build.js
+scripts/start.js
+scripts/test.js
+
