@@ -1,0 +1,73 @@
+.HomePage__banner {
+    height: 360px;
+    display: flex;
+    background-image: url('./assets/cinema-seats2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .HomePage__title-container {
+    height: 100px;
+    background:rgba(255, 255, 255, 0.678);
+    align-self: center;
+    margin: auto;
+    display:flex;
+    padding: 40px 20px;
+  }
+  
+  .HomePage__title {
+    font-size: 5em;
+    margin-top:16px;
+    font-weight: bold;
+    align-self:center;
+  }
+  
+  .HomePage__content {
+    margin-top: 8px;
+    height: 100%;
+    overflow:auto;
+    padding-bottom: 8px;
+  }
+  
+  .HomePage__collection {
+    cursor:pointer;
+  }
+  
+  .HomePage__collection-image {
+    width: 100%;
+    max-height: 260px;
+  }
+  
+  .HomePage__collection-image:hover {
+    opacity: 0.6;
+  }
+  
+  .HomePage__collection-voteAverage {
+    text-align: center;
+  }
+  
+  .HomePage__column {
+    border-left: 1px solid #eee;
+    margin-top:8px;
+    height: 360px;
+  }
+  
+  .HomePage__column > ul {
+    padding:0;
+    list-style-type: none;
+  }
+  
+  .HomePage__column > ul > li > p:nth-child(1) {
+    margin-bottom: 2px;
+  }
+  
+  .HomePage__column > ul > li > p:nth-child(2) {
+    font-size: 0.6em;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .HomePage__title {
+      font-size: 3em;
+    }
+  }

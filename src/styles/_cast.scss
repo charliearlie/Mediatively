@@ -1,0 +1,60 @@
+#cast-modal-btn {
+    border-radius: 0%;
+  }
+  .CastSection {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding:32px;
+  }
+  
+  h2.CastSection__header {
+    margin-bottom: 0;
+    margin-top: 13px;
+  }
+  
+  .CastMember {
+    padding:16px;
+    border-bottom: 1px solid #eee;
+    max-height: 124px;
+  }
+  
+  .CastMember:hover {
+    cursor: pointer;
+    background-color: #eee;
+  }
+  
+  .CastMember__name {
+    margin-left:32px;
+  }
+  
+  .PersonSection {
+    padding:8px;
+  }
+  
+  *:before, *:after {
+    content: '';
+  }
+  
+  .person-row {
+    border-bottom:1px solid rgb(224, 224, 224);
+    margin-top:0
+  }
+  
+  .person-row:hover {
+    background-color: rgb(235, 233, 233);
+    cursor:pointer;
+  }
+  
+  .person-row h3 {
+    margin-bottom:0;
+  }
+  
+  .person-row img {
+    padding-top:4px;
+  }
+  
+  a.person-anchor {
+    text-decoration: none;
+    color:#221e1e;
+  }

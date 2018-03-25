@@ -1,0 +1,38 @@
+.rating {
+    width:60px;
+    height:60px;
+    display: flex;
+    align-items: center;
+    background-color:grey;
+  }
+  
+  .collection-rating {
+    text-align: center;
+    width:24px;
+    height:24px;
+    font-size:14px;
+    margin: 8px auto;
+  }
+  
+  .rating.high {
+    background-color:#4CAF50;
+  }
+  
+  .rating.medium {
+    background-color:#FF9800;
+  }
+  
+  .rating.low {
+    background-color:#F44336;
+  }
+  
+  .rating p {
+    font-size:28px;
+    margin: 0 auto;
+    font-weight:bold;
+    color:white;
+  }
+  
+  .collection-rating p {
+    font-size:14px;
+  }

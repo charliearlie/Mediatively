@@ -1,0 +1,32 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: #fff;
+    margin-top: 8px;
+  }
+  
+  .showcard {
+    background-color: #fff;
+    height:330px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  
+  .showcard h3 {
+    font-size:1em;
+    color: #221e1e;
+  }
+  
+  .showcard a:hover {
+    text-decoration:none;
+  }
+  
+  .showcard p {
+    font-size:1em;
+    color: #221e1e;
+  }
+  
+  .showcard:hover {
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
