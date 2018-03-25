@@ -46,7 +46,7 @@ const mapStateToProps = state => ({ shows: state.shows.showLandingPage });
 
 const mapDispatchToProps = (dispatch) => {
 	const temp = dispatch;
-	console.log(temp);
+	console.log(temp); // eslint-disable-line no-console
 	return {
 		loadShows: () => {
 			this.showActions.loadShows();
