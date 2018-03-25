@@ -69,7 +69,7 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path
-        .relative(paths.appSrc, info.absoluteResourcePath)
+        .relative(paths.appMain, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
   },
   resolve: {
