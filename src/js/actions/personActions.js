@@ -11,5 +11,5 @@ export function loadPerson(id) {
 }
 
 export function emptyFunction() {
-	console.log('getting the linter to stop complaining');
+	return 1;
 }
