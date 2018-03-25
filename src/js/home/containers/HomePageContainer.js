@@ -20,7 +20,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => {
 	const x = 1;
-	console.log(x);
+	console.log(x); // eslint-disable-line no-console
 	return {
 		onLoad: () => {
 			dispatch(loadBoxOfficeMovies());

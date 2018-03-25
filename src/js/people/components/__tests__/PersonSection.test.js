@@ -42,7 +42,7 @@ const cast = [
 		id: 11108,
 		name: 'Simon Pegg',
 		order: 3,
-		profile_path: '/23e2uoNlpDvLumNic16fS2YjZjL.jpg'
+		profile_path: '/23e2uoNlpDvLumNic16fS2YjZjL.jpg',
 	},
 	{
 		cast_id: 12,
@@ -52,7 +52,7 @@ const cast = [
 		id: 40900,
 		name: 'Mark Rylance',
 		order: 4,
-		profile_path: '/5XrQYvdYqiGUepbgmRQfOltgBRJ.jpg'
+		profile_path: '/5XrQYvdYqiGUepbgmRQfOltgBRJ.jpg',
 	},
 ];
 
