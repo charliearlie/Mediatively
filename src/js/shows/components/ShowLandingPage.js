@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import ShowCard from './ShowCard';
 import * as showActions from '../../actions/showActions';
-import '../../App.css';
 
 class ShowLandingPage extends Component {
 	constructor(props) {

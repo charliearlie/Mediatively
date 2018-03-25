@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 import ApiHoc from '../../globalComponents/ApiHoc';
 import { loadPopularMovies, loadUpcomingMovies } from '../../actions/movieActions';
-import '../../App.css';
 
 const PopularMoviesPage = (props) => {
 	const { movies } = props;
