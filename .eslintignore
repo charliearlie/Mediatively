@@ -1,4 +1,4 @@
-src/js/registerServiceWorker.js
+src/registerServiceWorker.js
 config/webpack.config.dev.js
 config/webpack.config.prod.js
 config/webpackDevServer.config.js

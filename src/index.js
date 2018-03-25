@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, withRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import '../index.css';
+import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../styles/main.scss';
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.scss';
 
 import NavBar from './navigation/navbar';
 import Footer from './navigation/footer';
