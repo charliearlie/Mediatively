@@ -1,0 +1,41 @@
+@import './colours.scss';
+@import './_homepage.scss';
+@import './coreinfo.scss';
+@import './rating.scss';
+@import './movietrailer.scss';
+@import './mediadetails.scss';
+
+@import './footer.scss';
+@import './navbar.scss';
+@import './cast.scss';
+@import './card.scss';
+@import'./misc.scss';
+@import './suggestedmovie.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.root-body {
+  padding-top: 64px;
+  padding-bottom: 32px;
+  background-color: $color-gainsboro;
+  height: 100%;
+}
+
+container {
+    margin-top:25px;
+    background-color: $color-gainsboro;
+}
+  
+.container-fluid {
+    padding-top:50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .root-body {
+      padding-top: 42px;
+      padding-bottom: 32px;
+    }
+  }

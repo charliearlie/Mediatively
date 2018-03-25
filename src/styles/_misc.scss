@@ -1,0 +1,46 @@
+@import '~antd/dist/antd.css';
+.image-responsive {
+    width:100%;
+    max-width:350px;
+    max-height:500px;
+}
+
+.label {
+    margin-right:8px;
+}
+  
+span.label.label-default {
+    border-radius: 0;
+    cursor: pointer;
+}
+  
+span.label.label-default:hover {
+    background-color: #BBB
+}
+
+.ant-card-meta-title {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.ant-tabs-ink-bar {
+    background-color: $color-cgBlue;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+    color: $color-cgBlue;
+}
+  
+@media only screen and (max-width: 768px) {
+    .ant-card.ant-card-bordered.ant-card-hoverable {
+      width: 68%;
+      text-align:center;
+      margin:auto;
+      margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ant-card.ant-card-bordered.ant-card-hoverable {
+      width: 100%;
+    }
+}
