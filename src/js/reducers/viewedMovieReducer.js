@@ -15,6 +15,8 @@ export default function viewedMovieReducer(state = {}, action) {
 		return Object.assign({}, state, { videoId: selectFeaturedTrailer(action.payload) });
 	case types.LOAD_SUGGESTED_MOVIES:
 		return { ...state, suggestedMovies: action.payload };
+	case types.LOAD_MOVIE_REVIEWS:
+		return { ...state, reviews: action.payload };
 	default:
 		return state;
 	}

@@ -7,6 +7,7 @@ import {
 	ADD_YOUTUBE_ID_TO_MOVIE,
 	LOAD_SUGGESTED_MOVIES,
 	LOAD_BOX_OFFICE_MOVIES,
+	LOAD_MOVIE_REVIEWS,
 } from './actionTypes';
 
 export function loadPopularMovies() {
@@ -68,6 +69,15 @@ export function loadSuggestedMovies(id) {
 		type: LOAD_SUGGESTED_MOVIES,
 		payload: new Promise((resolve) => {
 			axios.get(`/movies/recommended/${id}`).then(response => resolve(response.data));
+		}),
+	};
+}
+
+export function loadMovieReviews(id) {
+	return {
+		type: LOAD_MOVIE_REVIEWS,
+		payload: new Promise((resolve) => {
+			axios.get(`/movies/reviews/${id}`).then(response => resolve(response.data));
 		}),
 	};
 }

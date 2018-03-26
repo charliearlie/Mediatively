@@ -5,11 +5,12 @@ import PersonSection from '../../people/components/PersonSection';
 import MovieDetails from './MovieDetails';
 import TrailerSection from './TrailerSelection';
 import SuggestedMoviesSection from './SuggestedMoviesSection';
+import ReviewSection from '../../globalComponents/ReviewSection';
 
 const MoviePage = (props) => {
 	// eslint-disable-next-line react/prop-types
 	const { movieInfo } = props;
-	const { suggestedMovies } = movieInfo;
+	const { suggestedMovies, reviews } = movieInfo;
 	const title = movieInfo.title || 'Show Brainer';
 	const releaseDate = movieInfo.release_date;
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
@@ -53,6 +54,13 @@ const MoviePage = (props) => {
 							cast
 							personGroup={movieInfo.credits.cast}
 						/>}
+					</div>
+				</div>
+				<div className="row card ReviewSection">
+					<div className="col-xs-12">
+						{reviews &&
+							<ReviewSection reviews={reviews} />
+						}
 					</div>
 				</div>
 				<div className="row card SuggestedMoviesSection">

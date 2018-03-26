@@ -1,0 +1,11 @@
+.ReviewSection {
+    padding:8px;
+}
+
+.Review {
+    border: 1px solid $color-platinum;
+    min-height: 100px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+}
