@@ -77,7 +77,7 @@ export function loadMovieReviews(id) {
 	return {
 		type: LOAD_MOVIE_REVIEWS,
 		payload: new Promise((resolve) => {
-			axios.get(`/movies/reviews/${id}`).then(response => resolve(response.data));
+			axios.get(`https://mediatively-api.herokuapp.com/movies/reviews/${id}`).then(response => resolve(response.data));
 		}),
 	};
 }

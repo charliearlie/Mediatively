@@ -14,7 +14,7 @@ export function loadTodaysShows() {
 	return {
 		type: LOAD_TODAYS_SHOWS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get('/shows/today').then(response => resolve(response.data));
+			axios.get('https://mediatively-api.herokuapp.com/shows/today').then(response => resolve(response.data));
 		}),
 	};
 }
