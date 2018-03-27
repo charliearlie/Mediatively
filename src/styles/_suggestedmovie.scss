@@ -1,0 +1,19 @@
+.SuggestedMoviesSection {
+    margin-top: 8px;
+  }
+  
+  .SuggestedMovie {
+    /* height: 360px; */
+    border-right: 1px solid #eee;
+    padding:16px;
+  }
+  
+  .SuggestedMovie__image {
+    width:90%;
+    margin:8px;
+  }
+  
+  .SuggestedMovie:hover {
+    cursor: pointer;
+    background-color: $color-platinum;
+  }
