@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
+import { Code } from 'react-content-loader';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import PersonSection from '../../people/components/PersonSection';
 import MovieDetails from './MovieDetails';
@@ -7,17 +8,16 @@ import TrailerSection from './TrailerSelection';
 import SuggestedMoviesSection from './SuggestedMoviesSection';
 import ReviewSection from '../../globalComponents/ReviewSection';
 
-const MoviePage = (props) => {
-	// eslint-disable-next-line react/prop-types
-	const { movieInfo } = props;
-	const { suggestedMovies, reviews } = movieInfo;
-	const title = movieInfo.title || 'Show Brainer';
-	const releaseDate = movieInfo.release_date;
-	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
-	const directorName = director ? director.name : 'Not listed';
+class MoviePage extends Component {
+	renderPage() {
+		// eslint-disable-next-line react/prop-types
+		const { movieInfo } = this.props;
+		const { suggestedMovies, reviews } = movieInfo;
+		const releaseDate = movieInfo.release_date;
+		const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
+		const directorName = director ? director.name : 'Not listed';
 
-	return (
-		<DocumentTitle title={title}>
+		return (
 			<div className="MoviePage">
 				<div className="row">
 					<CoreInfo
@@ -71,8 +71,18 @@ const MoviePage = (props) => {
 					</div>
 				</div>
 			</div>
-		</DocumentTitle>
-	);
-};
+		);
+	}
+
+	render() {
+		// eslint-disable-next-line react/prop-types
+		const title = this.props.movieInfo.title || 'Show Brainer';
+		return (
+			<DocumentTitle title={title}>
+				{this.props.movieInfo.title ? this.renderPage() : <Code />}
+			</DocumentTitle>
+		);
+	}
+}
 
 export default MoviePage;
