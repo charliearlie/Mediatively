@@ -17,6 +17,8 @@ export default function viewedMovieReducer(state = {}, action) {
 		return { ...state, suggestedMovies: action.payload };
 	case types.LOAD_MOVIE_REVIEWS:
 		return { ...state, reviews: action.payload };
+	case types.CLEAR_MOVIE:
+		return {};
 	default:
 		return state;
 	}

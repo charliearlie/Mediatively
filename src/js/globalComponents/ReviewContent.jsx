@@ -17,7 +17,7 @@ class ReviewContent extends Component {
 	}
 
 	renderContent() {
-		return !this.state.showMore && this.props.content.length > 100 ?
+		return !this.state.showMore && this.props.content.length > 250 ?
 			this.props.content.slice(0, 250) : this.props.content;
 	}
 
