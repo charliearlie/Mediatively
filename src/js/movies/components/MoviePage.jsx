@@ -42,7 +42,7 @@ const MoviePage = (props) => {
 				</div>
 				<div className="row card">
 					<div className="col col-md-9 CoreInfo__related">
-						{movieInfo.title &&
+						{movieInfo.videoId &&
 						<TrailerSection
 							name={movieInfo.name}
 							youtubeId={movieInfo.videoId}

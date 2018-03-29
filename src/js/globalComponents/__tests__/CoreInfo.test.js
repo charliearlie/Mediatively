@@ -11,6 +11,7 @@ describe('coreinfo component', () => {
 		posterUrl={testMovie.poster_path}
 		inProduction={testMovie.in_production}
 		overview={testMovie.overview}
+		voteCount={testMovie.vote_count}
 		voteAverage={testMovie.vote_average}
 		genres={testMovie.genres}
 	/>);
