@@ -8,6 +8,7 @@ import {
 	LOAD_SUGGESTED_MOVIES,
 	LOAD_BOX_OFFICE_MOVIES,
 	LOAD_MOVIE_REVIEWS,
+	CLEAR_MOVIE,
 } from './actionTypes';
 
 export function loadPopularMovies() {
@@ -79,5 +80,11 @@ export function loadMovieReviews(id) {
 		payload: new Promise((resolve) => {
 			axios.get(`/movies/reviews/${id}`).then(response => resolve(response.data));
 		}),
+	};
+}
+
+export function clearViewedMovie() {
+	return {
+		type: CLEAR_MOVIE,
 	};
 }
