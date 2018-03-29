@@ -27,6 +27,7 @@ const MoviePage = (props) => {
 						inProduction={movieInfo.in_production}
 						overview={movieInfo.overview}
 						voteAverage={movieInfo.vote_average}
+						voteCount={movieInfo.vote_count}
 						genres={movieInfo.genres}
 						backdropUrl={movieInfo.backdrop_path}
 					/>
@@ -41,7 +42,7 @@ const MoviePage = (props) => {
 				</div>
 				<div className="row card">
 					<div className="col col-md-9 CoreInfo__related">
-						{movieInfo.name &&
+						{movieInfo.title &&
 						<TrailerSection
 							name={movieInfo.name}
 							youtubeId={movieInfo.videoId}
