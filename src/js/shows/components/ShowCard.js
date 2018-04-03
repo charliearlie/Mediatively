@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import imageAssets from '../../assets/imageAssets';
 
 const ShowCard = (props) => {
 	const {
@@ -10,13 +11,14 @@ const ShowCard = (props) => {
 		voteAverage,
 		id,
 	} = props;
+	const { posterUrl, imageSizes } = imageAssets;
 
 	return (
 
 		<div className="showcard">
 			<Link to={`/show/${id}`}>
 				<div className="showcard-img">
-					<img src={posterPath} alt={title} />
+					<img src={`${posterUrl}${imageSizes.posterSizes.small}${posterPath}`} alt={title} />
 				</div>
 				<h3>{title}</h3>
 				<p>{firstAirDate.slice(0, 4)}</p>
