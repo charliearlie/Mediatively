@@ -9,7 +9,7 @@ describe('Movie Page component', () => {
 	const target = mount(<MovieCard
 		key={`${testMovie.id}_key`}
 		title={testMovie.title}
-		releaseDate={testMovie.release_date}
+		releaseDate={testMovie.releaseDate}
 		id={testMovie.id}
 	/>);
 
