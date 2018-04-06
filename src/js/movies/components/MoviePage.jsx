@@ -57,13 +57,13 @@ class MoviePage extends Component {
 						/>}
 					</div>
 				</div>
+				{reviews && reviews.length > 0 &&
 				<div className="row card ReviewSection">
 					<div className="col-xs-12">
-						{reviews &&
-							<ReviewSection reviews={reviews} />
-						}
+						<ReviewSection reviews={reviews} />
 					</div>
 				</div>
+				}
 				<div className="row card SuggestedMoviesSection">
 					<div className="col-xs-12">
 						{suggestedMovies &&

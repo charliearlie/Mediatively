@@ -2,11 +2,13 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import getRatingClass from '../globalComponents/helpers/ratingsHelper';
 import CoreInfoLoader from './loaders/CoreInfoLoader';
+import imageAssets from '../assets/imageAssets';
 
 const CoreInfo = (props) => {
+	const { posterUrl, imageSizes } = imageAssets;
 	const releaseYear = props.releaseDate ? props.releaseDate.substring(0, 4) : '';
 	const ratingClass = getRatingClass(props.voteAverage);
-	const backgroundImage = `url("${props.backdropUrl}")`;
+	const backgroundImage = `url("${posterUrl}${imageSizes.posterSizes.original}${props.backdropUrl}")`;
 
 	return (
 		<div
@@ -23,7 +25,11 @@ const CoreInfo = (props) => {
 					{props.title ?
 						<Fragment>
 							<div className="col-sm-3 col-xs-12 text-center coreinfo-image-container">
-								<img src={props.posterUrl} alt={`${props.title}_poster`} className="image-responsive" />
+								<img
+									src={`${posterUrl}${imageSizes.posterSizes.medium}${props.posterUrl}`}
+									alt={`${props.title}_poster`}
+									className="image-responsive"
+								/>
 							</div>
 							<div className="col-sm-6 col xs-12 coreinfo-detail">
 								<h2 className="CoreInfo__title">

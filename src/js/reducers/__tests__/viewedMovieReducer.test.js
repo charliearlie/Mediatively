@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import reducer from '../viewedMovieReducer';
 import * as types from '../../actions/actionTypes';
-import { testMovie, testMovieCredits } from '../../assets/testAssets';
+import { testMovie } from '../../assets/testAssets';
 
 describe('viewed movie reducer', () => {
 	it('should return the initial state', () => {
@@ -13,12 +13,5 @@ describe('viewed movie reducer', () => {
 			type: types.LOAD_MOVIE_DETAILS_SUCCESS,
 			payload: testMovie,
 		})).to.deep.equal(testMovie);
-	});
-
-	it('should return the loaded movie with credits appended', () => {
-		expect(reducer(testMovie, {
-			type: types.ADD_CREDITS_TO_MOVIE,
-			payload: testMovieCredits,
-		})).to.deep.equal({ ...testMovie, credits: testMovieCredits });
 	});
 });

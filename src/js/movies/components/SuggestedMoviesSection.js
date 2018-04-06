@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import imageAssets from '../../assets/imageAssets';
 
 const SuggestedMoviesSection = (props) => {
 	const { suggestedMovies } = props;
+	const { posterUrl, imageSizes } = imageAssets;
 	return (
 		<div>
 			<h2>You may also like</h2>
@@ -14,7 +16,7 @@ const SuggestedMoviesSection = (props) => {
 					<div className="row">
 						<img
 							className="image-responsive SuggestedMovie__image"
-							src={movie.poster_path}
+							src={`${posterUrl}${imageSizes.posterSizes.small}${movie.poster_path}`}
 							alt={movie.title}
 						/>
 					</div>
