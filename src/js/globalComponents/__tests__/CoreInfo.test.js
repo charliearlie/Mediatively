@@ -3,12 +3,11 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import { testMovie } from '../../assets/testAssets';
 import CoreInfo from '../CoreInfo';
-import imageAssets from '../../assets/imageAssets';
 
 describe('coreinfo component', () => {
 	const target = shallow(<CoreInfo
 		title={testMovie.title}
-		releaseDate={testMovie.release_date}
+		releaseDate={testMovie.releaseDate}
 		posterUrl={testMovie.poster_path}
 		inProduction={testMovie.in_production}
 		overview={testMovie.overview}
@@ -23,9 +22,8 @@ describe('coreinfo component', () => {
 	});
 
 	test('CoreInfo should display the image for movie/show', () => {
-		const { posterUrl, imageSizes } = imageAssets;
 		const img = target.find('.image-responsive');
-		expect(img.prop('src')).to.equal(`${posterUrl}${imageSizes.posterSizes.medium}${testMovie.poster_path}`);
+		expect(img.prop('src')).to.equal(testMovie.poster_path);
 	});
 
 	test('CoreInfo should show the genre as a header', () => {
