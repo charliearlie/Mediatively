@@ -26,7 +26,7 @@ const MoviePage = (props) => {
 						posterUrl={movieInfo.posterPath}
 						inProduction={movieInfo.in_production}
 						overview={movieInfo.overview}
-						voteAverage={movieInfo.vote_average}
+						voteAverage={movieInfo.voteAverage}
 						voteCount={movieInfo.vote_count}
 						genres={movieInfo.genres}
 						backdropUrl={movieInfo.backdropPath}
@@ -45,7 +45,7 @@ const MoviePage = (props) => {
 						{movieInfo.videoId &&
 						<TrailerSection
 							name={movieInfo.name}
-							youtubeId={movieInfo.videoId}
+							videos={movieInfo.videos}
 						/>
 						}
 					</div>
