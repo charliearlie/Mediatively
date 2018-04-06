@@ -12,9 +12,9 @@ const MoviePage = (props) => {
 	const { movieInfo } = props;
 	const { suggestedMovies, reviews } = movieInfo;
 	const title = movieInfo.title || 'Show Brainer';
-	const releaseDate = movieInfo.release_date;
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
 	const directorName = director ? director.name : 'Not listed';
+	console.log('🏠', props);
 
 	return (
 		<DocumentTitle title={title}>
@@ -22,14 +22,14 @@ const MoviePage = (props) => {
 				<div className="row">
 					<CoreInfo
 						title={movieInfo.title}
-						releaseDate={releaseDate}
-						posterUrl={movieInfo.poster_path}
+						releaseDate={movieInfo.releaseDate}
+						posterUrl={movieInfo.posterPath}
 						inProduction={movieInfo.in_production}
 						overview={movieInfo.overview}
 						voteAverage={movieInfo.vote_average}
 						voteCount={movieInfo.vote_count}
 						genres={movieInfo.genres}
-						backdropUrl={movieInfo.backdrop_path}
+						backdropUrl={movieInfo.backdropPath}
 					/>
 				</div>
 				<div className="row">
@@ -50,10 +50,10 @@ const MoviePage = (props) => {
 						}
 					</div>
 					<div className="col-md-3 CoreInfo__cast">
-						{movieInfo.credits &&
+						{movieInfo.cast &&
 						<PersonSection
 							cast
-							personGroup={movieInfo.credits.cast}
+							personGroup={movieInfo.cast}
 						/>}
 					</div>
 				</div>
