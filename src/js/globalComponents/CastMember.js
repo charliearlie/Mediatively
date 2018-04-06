@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import DefaultCastImage from '../assets/default-cast-image.png';
 
 const CastMember = (props) => {
-	const baseImageUrl = 'https://image.tmdb.org/t/p/w185';
-	const image = props.image ? baseImageUrl + props.image : DefaultCastImage;
+	const image = props.image || DefaultCastImage;
 	return (
 		<div className="CastMember">
 			<div className="row">

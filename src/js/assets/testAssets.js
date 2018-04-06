@@ -16,7 +16,7 @@ export const testMovie = {
 	original_title: 'Fight Club',
 	overview: 'A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \'fight clubs\' forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.',
 	popularity: 59.546773,
-	poster_path: '/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg',
+	poster_path: 'https://image.tmdb.org/t/p/w185/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg',
 	production_companies: [
 		{
 			name: 'Twentieth Century Fox Film Corporation',
@@ -57,7 +57,7 @@ export const testMovie = {
 			name: 'United States of America',
 		},
 	],
-	release_date: '1999-10-15',
+	releaseDate: '1999-10-15',
 	revenue: 100853753,
 	runtime: 139,
 	spoken_languages: [
@@ -157,7 +157,7 @@ export const testMovieWithCredits = {
 	original_title: 'Fight Club',
 	overview: 'A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \'fight clubs\' forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.',
 	popularity: 59.546773,
-	poster_path: '/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg',
+	poster_path: 'https://image.tmdb.org/t/p/w185/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg',
 	production_companies: [
 		{
 			name: 'Twentieth Century Fox Film Corporation',
@@ -198,7 +198,7 @@ export const testMovieWithCredits = {
 			name: 'United States of America',
 		},
 	],
-	release_date: '1999-10-15',
+	releasDate: '1999-10-15',
 	revenue: 100853753,
 	runtime: 139,
 	spoken_languages: [

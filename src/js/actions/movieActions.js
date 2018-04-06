@@ -25,11 +25,44 @@ export function loadUpcomingMovies() {
 	};
 }
 
-export function loadMovieDetails(id) {
+export function loadMovieDetails(movieId) {
 	return {
 		type: LOAD_MOVIE_DETAILS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get(`https://mediatively-api.herokuapp.com/movies/${id}`).then(response => resolve(response.data));
+			axios.post('https://mediatively-api.herokuapp.com/movie', {
+				query: `
+					query MovieDetails {
+						movie(id: ${movieId}) {
+							title
+							backdropPath
+							budget
+							homepage
+							revenue
+							voteAverage
+							posterPath
+							runtime
+							overview
+							id
+							releaseDate
+							genres {
+								id,
+								name
+							},
+							videos {
+								id, key, name, type
+							},
+							suggestedMovies {
+								id, posterPath, releaseDate, title
+							},
+							reviews {
+								author, id, content
+							},
+							cast {
+								name, id, character, profilePath, order, gender
+							}
+						},
+					}`,
+			}).then(response => resolve(response.data.data.movie));
 		}),
 	};
 }

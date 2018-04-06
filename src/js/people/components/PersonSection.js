@@ -30,7 +30,7 @@ class PersonSection extends Component {
 								<CastMember
 									name={person.name}
 									character={person.character}
-									image={person.profile_path}
+									image={person.profilePath}
 								/>
 							</div>
 						</div>

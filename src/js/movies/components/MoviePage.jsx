@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import DocumentTitle from 'react-document-title';
-import { Code } from 'react-content-loader';
+// import { Code } from 'react-content-loader';
 import CoreInfo from '../../globalComponents/CoreInfo';
 import PersonSection from '../../people/components/PersonSection';
 import MovieDetails from './MovieDetails';
@@ -8,28 +8,28 @@ import TrailerSection from './TrailerSelection';
 import SuggestedMoviesSection from './SuggestedMoviesSection';
 import ReviewSection from '../../globalComponents/ReviewSection';
 
-class MoviePage extends Component {
-	renderPage() {
-		// eslint-disable-next-line react/prop-types
-		const { movieInfo } = this.props;
-		const { suggestedMovies, reviews } = movieInfo;
-		const releaseDate = movieInfo.release_date;
-		const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
-		const directorName = director ? director.name : 'Not listed';
+const MoviePage = (props) => {
+	// eslint-disable-next-line react/prop-types
+	const { movieInfo } = props;
+	const { suggestedMovies, reviews } = movieInfo;
+	const title = movieInfo.title || 'Show Brainer';
+	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
+	const directorName = director ? director.name : 'Not listed';
 
-		return (
+	return (
+		<DocumentTitle title={title}>
 			<div className="MoviePage">
 				<div className="row">
 					<CoreInfo
 						title={movieInfo.title}
-						releaseDate={releaseDate}
-						posterUrl={movieInfo.poster_path}
+						releaseDate={movieInfo.releaseDate}
+						posterUrl={movieInfo.posterPath}
 						inProduction={movieInfo.in_production}
 						overview={movieInfo.overview}
 						voteAverage={movieInfo.vote_average}
 						voteCount={movieInfo.vote_count}
 						genres={movieInfo.genres}
-						backdropUrl={movieInfo.backdrop_path}
+						backdropUrl={movieInfo.backdropPath}
 					/>
 				</div>
 				<div className="row">
@@ -50,10 +50,10 @@ class MoviePage extends Component {
 						}
 					</div>
 					<div className="col-md-3 CoreInfo__cast">
-						{movieInfo.credits &&
+						{movieInfo.cast &&
 						<PersonSection
 							cast
-							personGroup={movieInfo.credits.cast}
+							personGroup={movieInfo.cast}
 						/>}
 					</div>
 				</div>
@@ -72,18 +72,8 @@ class MoviePage extends Component {
 					</div>
 				</div>
 			</div>
-		);
-	}
-
-	render() {
-		// eslint-disable-next-line react/prop-types
-		const title = this.props.movieInfo.title || 'Show Brainer';
-		return (
-			<DocumentTitle title={title}>
-				{this.props.movieInfo.title ? this.renderPage() : <Code />}
-			</DocumentTitle>
-		);
-	}
-}
+		</DocumentTitle>
+	);
+};
 
 export default MoviePage;
