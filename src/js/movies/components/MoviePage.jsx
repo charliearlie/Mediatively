@@ -14,7 +14,6 @@ const MoviePage = (props) => {
 	const title = movieInfo.title || 'Show Brainer';
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
 	const directorName = director ? director.name : 'Not listed';
-	console.log('🏠', props);
 
 	return (
 		<DocumentTitle title={title}>
