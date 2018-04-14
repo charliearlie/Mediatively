@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs } from 'antd';
+import { Tabs, Tab } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import HomePageCollection from './HomePageCollection';
 
@@ -11,18 +11,18 @@ const HomePageContentSection = (props) => {
 		width,
 		tabs,
 	} = props;
-	const { TabPane } = Tabs;
+
 	return (
 		<div className="col-xs-12 col-sm-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 			<h2>{header}</h2>
-			<Tabs defaultActiveKey="0" onChange={this.onTabChange}>
+			<Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
 				{sections.map((section, i) => (
-					<TabPane
-						tab={tabs[i]}
-						key={i} // eslint-disable-line react/no-array-index-key
+					<Tab
+						title={tabs[i]}
+						eventKey={i}
 					>
 						<HomePageCollection type={type} collection={section} width={width} />
-					</TabPane>
+					</Tab>
 				))}
 			</Tabs>
 		</div>
