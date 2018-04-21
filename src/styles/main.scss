@@ -1,4 +1,5 @@
 @import './colours.scss';
+@import './overrides.scss';
 @import './_homepage.scss';
 @import './coreinfo.scss';
 @import './rating.scss';
@@ -12,7 +13,7 @@
 @import'./misc.scss';
 @import './suggestedmovie.scss';
 @import './reviews.scss';
-
+@import './revealcard.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body {
