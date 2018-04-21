@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import getRatingClass from './helpers/ratingsHelper';
 
-/* TODO: Reveal card animation */
+/* TODO: Reveal card animation
+	TODO: Make this a reusable component using a render prop
+*/
 class RevealCard extends Component {
 	constructor(props) {
 		super(props);
@@ -18,6 +21,7 @@ class RevealCard extends Component {
 	}
 
 	renderOverlay() {
+		const ratingClass = getRatingClass(this.props.voteAverage);
 		return (
 			<div key="reveal" className="RevealCard__reveal">
 				<div className="RevealCard__reveal-header">
@@ -28,6 +32,13 @@ class RevealCard extends Component {
 					<button className="RevealCard__reveal-close" onClick={() => this.toggleReveal()}>
 						<i className="far fa-window-close fa-2x" />
 					</button>
+				</div>
+				<div className="RevealCard__reveal-main">
+					{this.props.voteCount > 0 &&
+					<div className={`rating ${ratingClass}`}>
+						<p className="text-center CoreInfo__rating">{this.props.voteAverage}</p>
+					</div>
+					}
 				</div>
 			</div>
 		);
@@ -66,6 +77,13 @@ RevealCard.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
+	voteAverage: PropTypes.number,
+	voteCount: PropTypes.number,
+};
+
+RevealCard.defaultProps = {
+	voteAverage: 0,
+	voteCount: 0,
 };
 
 export default RevealCard;

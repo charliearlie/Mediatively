@@ -17,6 +17,8 @@ const HomePageCollection = (props) => {
 						title={item.title}
 						image={item.poster_path}
 						id={item.id}
+						voteAverage={item.vote_average}
+						voteCount={item.vote_count}
 					/>
 				</div>
 			))}
