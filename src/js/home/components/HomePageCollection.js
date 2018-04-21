@@ -1,52 +1,34 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Card } from 'antd';
-import getRatingClass from '../../globalComponents/helpers/ratingsHelper';
+import RevealCard from '../../globalComponents/RevealCard';
+// import getRatingClass from '../../globalComponents/helpers/ratingsHelper';
 
 
 const HomePageCollection = (props) => {
-	const { Meta } = Card;
-	const type = props.type || '';
-	const { collection, width } = props;
-	const cardStyles = width < 600 ? { padding: 0 } : null;
+	// const { Meta } = Card;
+	const { collection } = props;
+	// const cardStyles = width < 600 ? { padding: 0 } : null;
 
 	return (
-		<div>
+		<Fragment>
 			{collection && collection.slice(0, 4).map(item => (
-				<Link to={`/${type}/${item.id}`} key={item.id}>
-					<div className="col-xs-6 col-sm-3 HomePage__collection">
-						<Card
-							hoverable
-							bodyStyle={cardStyles}
-							cover={<img alt={item.title} src={item.poster_path} />}
-						>
-							{ width > 600 &&
-								<Meta
-									title={item.title}
-									description={
-										<div className={`rating ${getRatingClass(item.vote_average)} collection-rating`}>
-											<p className="HomePage__collection-voteAverage">{item.vote_average}</p>
-										</div>
-									}
-								/>
-							}
-						</Card>
-					</div>
-				</Link>
+				<div className="col-xs-6 col-md-3 HomePage__Collection">
+					<RevealCard
+						title={item.title}
+						image={item.poster_path}
+						id={item.id}
+						voteAverage={item.vote_average}
+						voteCount={item.vote_count}
+					/>
+				</div>
 			))}
-		</div>
+		</Fragment>
 	);
 };
 
 HomePageCollection.propTypes = {
 	collection: PropTypes.arrayOf(PropTypes.object).isRequired,
-	type: PropTypes.string.isRequired,
-	width: PropTypes.number,
 };
 
-HomePageCollection.defaultProps = {
-	width: 1080,
-};
 
 export default HomePageCollection;
