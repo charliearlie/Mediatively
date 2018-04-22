@@ -14,7 +14,6 @@ const MoviePage = (props) => {
 	const title = movieInfo.title || 'Show Brainer';
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
 	const directorName = director ? director.name : 'Not listed';
-
 	return (
 		<DocumentTitle title={title}>
 			<div className="MoviePage">
@@ -25,8 +24,8 @@ const MoviePage = (props) => {
 						posterUrl={movieInfo.posterPath}
 						inProduction={movieInfo.in_production}
 						overview={movieInfo.overview}
-						voteAverage={movieInfo.vote_average}
-						voteCount={movieInfo.vote_count}
+						voteAverage={movieInfo.voteAverage}
+						voteCount={movieInfo.voteCount}
 						genres={movieInfo.genres}
 						backdropUrl={movieInfo.backdropPath}
 					/>
@@ -41,10 +40,11 @@ const MoviePage = (props) => {
 				</div>
 				<div className="row card">
 					<div className="col col-md-9 CoreInfo__related">
-						{movieInfo.videoId &&
+						{movieInfo.videos &&
 						<TrailerSection
-							name={movieInfo.name}
-							youtubeId={movieInfo.videoId}
+							name={movieInfo.title}
+							videos={movieInfo.videos}
+							videoTerm="official trailer"
 						/>
 						}
 					</div>

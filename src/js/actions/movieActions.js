@@ -39,6 +39,7 @@ export function loadMovieDetails(movieId) {
 							homepage
 							revenue
 							voteAverage
+							voteCount
 							posterPath
 							runtime
 							overview
