@@ -47,7 +47,7 @@ class RevealCard extends Component {
 	render() {
 		const { isOpen } = this.state;
 		return (
-			<div className="card RevealCard">
+			<div className="RevealCard">
 				<div className="RevealCard__image-container">
 					<Link to={`/movie/${this.props.id}`}>
 						<img
@@ -58,7 +58,7 @@ class RevealCard extends Component {
 					</Link>
 				</div>
 				<div className="RevealCard__content">
-					<h5>{this.props.title}</h5>
+					<h5 style={{ fontSize: '12px' }}>{this.props.title}</h5>
 					<div className="RevealCard__menu">
 						<a role="button" onClick={() => this.toggleReveal()}>
 							<i className="fas fa-ellipsis-v" />
