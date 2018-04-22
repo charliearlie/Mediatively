@@ -15,7 +15,7 @@ const HomePageContentSection = (props) => {
 	return (
 		<div className="col-xs-12 col-sm-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 			<h2>{header}</h2>
-			<Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+			<Tabs defaultActiveKey={0} id="uncontrolled-tab-example">
 				{sections.map((section, i) => (
 					<Tab
 						title={tabs[i]}
