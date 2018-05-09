@@ -1,22 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CoreInfo from '../../globalComponents/CoreInfo';
+import ShowSeasonSection from './ShowSeasonSection';
 
 const ShowPage = (props) => {
 	const { showInfo } = props;
-	const releaseDate = showInfo.first_air_date ? showInfo.first_air_date : showInfo.release_date;
 	return (
-		<div className="container">
-			<CoreInfo
-				title={showInfo.name}
-				releaseDate={releaseDate}
-				posterUrl={showInfo.poster_path}
-				inProduction={showInfo.in_production}
-				overview={showInfo.overview}
-				voteAverage={showInfo.vote_average}
-				genres={showInfo.genres}
-				backdropUrl={showInfo.backdrop_path}
-			/>
+		<div className="ShowPage">
+			<div className="row">
+				<CoreInfo
+					title={showInfo.title}
+					releaseDate={showInfo.releaseDate}
+					posterUrl={showInfo.posterPath}
+					inProduction={showInfo.inProduction}
+					overview={showInfo.overview}
+					voteAverage={showInfo.voteAverage}
+					genres={showInfo.genres}
+					backdropUrl={showInfo.backdropPath}
+					voteCount={showInfo.voteCount}
+				/>
+			</div>
+			<div className="row">
+				{ showInfo.seasons &&
+					<ShowSeasonSection seasons={showInfo.seasons} />
+				}
+			</div>
 		</div>
 	);
 };
