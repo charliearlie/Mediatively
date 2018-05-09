@@ -23,7 +23,37 @@ export function loadShowDetails(id) {
 	return {
 		type: LOAD_SHOW_DETAILS_SUCCESS,
 		payload: new Promise((resolve) => {
-			axios.get(`/shows/${id}`).then(response => resolve(response.data));
+			axios.post('/show', {
+				query: `
+				query ShowDetails {
+					show(id: ${id}) {
+					  title
+					  backdropPath
+					  numberOfSeasons
+					  homepage
+					  voteAverage
+					  voteCount
+					  posterPath
+					  runtime
+					  overview
+					  id
+					  releaseDate
+					  genres {
+						id,
+						name
+					  },
+					  seasons {
+						id, name, seasonNumber, episodeCount
+					  },
+					  reviews {
+						author, id, content
+					  },
+					  cast {
+						name, id, character, profilePath, order, gender
+					  }
+					}
+				  }`,
+			}).then(response => resolve(response.data.data.show));
 		}),
 	};
 }
