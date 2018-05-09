@@ -49,7 +49,7 @@ class RevealCard extends Component {
 		return (
 			<div className="RevealCard">
 				<div className="RevealCard__image-container">
-					<Link to={`/movie/${this.props.id}`}>
+					<Link to={`/${this.props.type}/${this.props.id}`}>
 						<img
 							className="RevealCard__image image-responsive"
 							src={this.props.image}
@@ -79,11 +79,13 @@ RevealCard.propTypes = {
 	image: PropTypes.string.isRequired,
 	voteAverage: PropTypes.number,
 	voteCount: PropTypes.number,
+	type: PropTypes.string,
 };
 
 RevealCard.defaultProps = {
 	voteAverage: 0,
 	voteCount: 0,
+	type: '',
 };
 
 export default RevealCard;
