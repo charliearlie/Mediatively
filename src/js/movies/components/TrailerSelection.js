@@ -21,9 +21,13 @@ class TrailerSection extends Component {
 		if (index) this.setState({ currentVideoId: videos[index].key });
 
 		if (Array.isArray(videos)) {
-			this.setState({
-				currentVideoId: videos.find(v => v.name.toLowerCase().includes(videoTerm)).key,
+			const video = videos.find((v) => {
+				const trailerId = v.name.toLowerCase().includes(videoTerm) ? v.key : videos[0].key;
+
+				return trailerId;
 			});
+
+			this.setState({ currentVideoId: video.key });
 		} else {
 			this.setState({ currentVideoId: videos.key });
 		}

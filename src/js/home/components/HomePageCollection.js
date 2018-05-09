@@ -5,15 +5,14 @@ import RevealCard from '../../globalComponents/RevealCard';
 
 
 const HomePageCollection = (props) => {
-	// const { Meta } = Card;
-	const { collection } = props;
-	// const cardStyles = width < 600 ? { padding: 0 } : null;
+	const { collection, type } = props;
 
 	return (
 		<Fragment>
 			{collection && collection.slice(0, 4).map(item => (
 				<div className="col-xs-6 col-md-3 HomePage__Collection">
 					<RevealCard
+						type={type}
 						title={item.title}
 						image={item.poster_path}
 						id={item.id}
@@ -28,6 +27,7 @@ const HomePageCollection = (props) => {
 
 HomePageCollection.propTypes = {
 	collection: PropTypes.arrayOf(PropTypes.object).isRequired,
+	type: PropTypes.string.isRequired,
 };
 
 
