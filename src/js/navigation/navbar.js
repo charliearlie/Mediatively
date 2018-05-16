@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Navbar, NavDropdown, Nav, NavItem, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Navbar, NavDropdown, Nav, NavItem, FormGroup } from 'react-bootstrap';
+import Search from '../search/components/Search';
 
 const NavBar = (props) => {
 	const { push } = props.history;
@@ -31,9 +32,8 @@ const NavBar = (props) => {
 				</Navbar.Form>
 				<Navbar.Form pullRight>
 					<FormGroup>
-						<FormControl type="text" placeholder="Search" />
+						<Search type="secondary" />
 					</FormGroup>{' '}
-					<Button type="submit"><i className="fas fa-search" /></Button>
 				</Navbar.Form>
 			</Navbar.Collapse>
 		</Navbar>

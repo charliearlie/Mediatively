@@ -1,0 +1,26 @@
+.Search {
+    display: flex;
+}
+
+.Search__Input {
+    height: 28px;
+    min-width: 220px;
+    max-width: 300px;
+    border: none;
+    padding: 4px;
+    font-weight: normal;
+}
+
+.Search__Button {
+    height: 28px;
+    border: none;
+}
+
+.Search__Button--primary {
+    background-color: $color-cgBlue;
+    color: white;
+}
+
+.Search__Button--secondary {
+    background-color: $color-lavenderGrey;
+}

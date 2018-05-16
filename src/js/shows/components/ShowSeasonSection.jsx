@@ -8,7 +8,7 @@ const ShowSeasonSection = ({ seasons }) => (
 		shadowLevel={2}
 	>
 		{seasons.map(season => (
-			JSON.stringify(season)
+			console.log(season)
 		))}
 	</Card>
 );

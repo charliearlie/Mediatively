@@ -9,22 +9,7 @@ class HomePage extends Component {
 		this.state = {
 			movieTabs: ['In Cinemas', 'Popular', 'Coming Soon'],
 			showTabs: ['On Tonight (US)', 'Popular', 'On Soon'],
-			width: 0,
 		};
-		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-	}
-
-	componentDidMount() {
-		this.updateWindowDimensions();
-		window.addEventListener('resize', this.updateWindowDimensions);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateWindowDimensions);
-	}
-
-	updateWindowDimensions() {
-		this.setState({ width: window.innerWidth });
 	}
 
 	render() {
@@ -49,26 +34,8 @@ class HomePage extends Component {
 						header="Movies"
 						type="movie"
 						sections={movieSections}
-						width={this.state.width}
 						tabs={this.state.movieTabs}
 					/>
-					<div className="col-xs-3 hidden-xs HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
-						<h2>Local</h2>
-						<ul>
-							<li>
-								<p>Everyman Muswell Hill</p>
-								<p>Fortis Green Road</p>
-							</li>
-							<li>
-								<p>Vue North Finchley</p>
-								<p>Great North Leisure Park</p>
-							</li>
-							<li>
-								<p>Crouch End Picturehouse</p>
-								<p>165 Tottenham Ln</p>
-							</li>
-						</ul>
-					</div>
 				</div>
 				<div className="col-xs-12 card">
 					<HomePageContentSection
@@ -78,7 +45,6 @@ class HomePage extends Component {
 						width={this.state.width}
 						tabs={this.state.showTabs}
 					/>
-					<div className="col-xs-3 hidden-xs HomePage__column" style={{ textAlign: 'left', paddingLeft: '-16px' }} />
 				</div>
 			</div>
 		);

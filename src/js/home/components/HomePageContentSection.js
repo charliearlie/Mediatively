@@ -8,12 +8,11 @@ const HomePageContentSection = (props) => {
 		header,
 		type,
 		sections,
-		width,
 		tabs,
 	} = props;
 
 	return (
-		<div className="col-xs-12 col-sm-9 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
+		<div className="col-xs-12 HomePage__content" style={{ textAlign: 'left', paddingLeft: '-16px' }}>
 			<h2>{header}</h2>
 			<Tabs defaultActiveKey={0} id="uncontrolled-tab-example">
 				{sections.map((section, i) => (
@@ -21,7 +20,7 @@ const HomePageContentSection = (props) => {
 						title={tabs[i]}
 						eventKey={i}
 					>
-						<HomePageCollection type={type} collection={section} width={width} />
+						<HomePageCollection type={type} collection={section} />
 					</Tab>
 				))}
 			</Tabs>
@@ -32,7 +31,6 @@ const HomePageContentSection = (props) => {
 HomePageContentSection.propTypes = {
 	header: PropTypes.string.isRequired,
 	sections: PropTypes.arrayOf(PropTypes.object).isRequired,
-	width: PropTypes.number.isRequired,
 	tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
 	type: PropTypes.string,
 };
