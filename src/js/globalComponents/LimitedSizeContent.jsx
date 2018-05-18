@@ -8,8 +8,6 @@ class LimitedSizeContent extends Component {
 		this.state = {
 			showMore: false,
 		};
-
-		this.toggleShowMore = this.toggleShowMore.bind(this);
 	}
 
 	toggleShowMore() {

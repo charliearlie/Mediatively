@@ -8,8 +8,6 @@ class TrailerSection extends Component {
 		this.state = {
 			currentVideoId: '',
 		};
-
-		this.loadDefaultVideo = this.loadDefaultVideo.bind(this);
 	}
 
 	componentDidMount() {

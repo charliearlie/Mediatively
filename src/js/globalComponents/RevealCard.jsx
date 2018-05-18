@@ -11,9 +11,6 @@ class RevealCard extends Component {
 		super(props);
 
 		this.state = { isOpen: false };
-
-		this.toggleReveal = this.toggleReveal.bind(this);
-		this.renderOverlay = this.renderOverlay.bind(this);
 	}
 
 	toggleReveal() {

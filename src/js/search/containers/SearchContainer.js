@@ -3,16 +3,12 @@ import Search from '../components/Search';
 import ApiHoc from '../../globalComponents/ApiHoc';
 import { performSearch } from '../../actions/searchActions';
 
-const mapStateToProps = state => ({
-	results: state.search.results,
-	numberOfResults: state.search.numberOfResults,
-	totalPages: state.search.totalPages,
-	currentPage: state.search.page,
+const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = dispatch => ({
-	performSearch: query => dispatch(performSearch(query)),
+const mapDispatchToProps = () => ({
+	performSearch: query => console.log(query),
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ApiHoc(Search));
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

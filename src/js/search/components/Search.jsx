@@ -8,8 +8,10 @@ class Search extends Component {
 		this.state = {
 			query: '',
 		};
+	}
 
-		this.handleInput = this.handleInput.bind(this);
+	performSearch() {
+		this.props.performSearch(this.state.query);
 	}
 
 	handleInput(e) {
@@ -33,7 +35,7 @@ class Search extends Component {
 				/>
 				<button
 					className={buttonClasses}
-					onClick={this.props.performSearch}
+					onClick={this.performSearch}
 				>
 					<i className="fas fa-search" />
 				</button>
