@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
 import Search from '../components/Search';
-import ApiHoc from '../../globalComponents/ApiHoc';
-import { performSearch } from '../../actions/searchActions';
 
 const mapStateToProps = () => ({
 });
