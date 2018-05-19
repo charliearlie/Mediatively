@@ -71,7 +71,7 @@ class RevealCard extends Component {
 }
 
 RevealCard.propTypes = {
-	id: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
 	title: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
 	voteAverage: PropTypes.number,
