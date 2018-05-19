@@ -1,5 +1,5 @@
 client/node_modules
-server/node_modules
+serve/node_modules
 config/apiKey.js
 .DS_STORE
 build
