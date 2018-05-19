@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LimitedSizeContent from './limitedSizeContent';
+import LimitedSizeContent from './LimitedSizeContent';
 
 const ReviewSection = (props) => {
 	const reviews = props.reviews.slice(0, 3);

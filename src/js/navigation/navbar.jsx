@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Navbar, NavDropdown, Nav, NavItem, FormGroup } from 'react-bootstrap';
-import Search from '../search/components/Search';
+import Search from '../search/containers/SearchContainer';
 
 const NavBar = (props) => {
 	const { push } = props.history;

@@ -11,7 +11,7 @@ const MoviePage = (props) => {
 	// eslint-disable-next-line react/prop-types
 	const { movieInfo } = props;
 	const { suggestedMovies, reviews } = movieInfo;
-	const title = movieInfo.title || 'Show Brainer';
+	const title = movieInfo.title || 'Mediatively';
 	const director = movieInfo.credits ? movieInfo.credits.crew.find(c => c.job === 'Director') : '';
 	const directorName = director ? director.name : 'Not listed';
 	return (

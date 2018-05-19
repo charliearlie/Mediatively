@@ -8,11 +8,9 @@ class LimitedSizeContent extends Component {
 		this.state = {
 			showMore: false,
 		};
-
-		this.toggleShowMore = this.toggleShowMore.bind(this);
 	}
 
-	toggleShowMore() {
+	toggleShowMore = () => {
 		this.setState(prevState => ({ showMore: !prevState.showMore }));
 	}
 
@@ -20,9 +18,8 @@ class LimitedSizeContent extends Component {
 		const { content, size } = this.props;
 		if (!this.state.showMore && content.length > size) {
 			const string = content.slice(0, size);
-			const lastSentenceEnder = string.lastIndexOf('.') > string.lastIndexOf('!') ? '.' : '?';
 
-			return string.slice(0, string.lastIndexOf(lastSentenceEnder) + 1);
+			return `${string.slice(0, string.lastIndexOf(' ') + 1)}...`;
 		}
 
 		return content;
