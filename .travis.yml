@@ -1,4 +1,7 @@
 language: node_js
+before_install: 
+  - cd ~/server && npm install && npm start
+before_script: cd ~/client && npm install
 node_js:
   - "stable"
 cache:
