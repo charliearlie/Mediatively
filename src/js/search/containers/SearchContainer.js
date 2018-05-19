@@ -4,8 +4,8 @@ import Search from '../components/Search';
 const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = () => ({
-	performSearch: query => console.log(query),
+const mapDispatchToProps = dispatch => ({
+	performSearch: query => dispatch({ type: 'PERFORM_SEARCH', payload: query }),
 });
 
 

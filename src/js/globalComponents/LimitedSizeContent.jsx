@@ -10,7 +10,7 @@ class LimitedSizeContent extends Component {
 		};
 	}
 
-	toggleShowMore() {
+	toggleShowMore = () => {
 		this.setState(prevState => ({ showMore: !prevState.showMore }));
 	}
 
@@ -19,7 +19,7 @@ class LimitedSizeContent extends Component {
 		if (!this.state.showMore && content.length > size) {
 			const string = content.slice(0, size);
 
-			return `${string.slice(0, string.lastIndexOf(' ') + 1)}... `;
+			return `${string.slice(0, string.lastIndexOf(' ') + 1)}...`;
 		}
 
 		return content;
