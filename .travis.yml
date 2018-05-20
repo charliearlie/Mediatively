@@ -1,4 +1,7 @@
 language: node_js
+before_install: 
+  - cd ./serve && npm install && npm run server &
+before_script: cd ./client && npm install
 node_js:
   - "stable"
 cache:
@@ -9,5 +12,12 @@ script:
   - npm run lint
   - npm rebuild node-sass
   - npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: "278d0a85-a40f-499a-a5a1-4f670be28c8a"
+  app: mediativelyy
+  on:
+    branch: add-server
 notifications:
     slack: top-banter:1WDCbLsEunsIUeZd3cXbPQJn
