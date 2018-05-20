@@ -17,5 +17,7 @@ deploy:
   api_key:
     secure: "278d0a85-a40f-499a-a5a1-4f670be28c8a"
   app: mediativelyy
+  on:
+    branch: add-server
 notifications:
     slack: top-banter:1WDCbLsEunsIUeZd3cXbPQJn
